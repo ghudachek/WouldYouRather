@@ -57,29 +57,14 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 #### Wireframes
 
-![Dummy Link](url)
+![Desktop Version](url)
 
-- Desktop Landing
+- Desktop Design All
 
-![Dummy Link](url)
+[Mobile Version](url)
 
-- Desktop Hero
+- Mobile Design All
 
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
@@ -89,15 +74,15 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 ``` structure
 
-src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
+      |__ css/
+          |__Home.css
 |__ components/
-      |__ Header.jsx
+      |__ Home.jsx
 |__ services/
+      |__ Sort.jsx
 
 ```
 
@@ -106,6 +91,12 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
@@ -124,9 +115,9 @@ src
 
 ## Post-MVP
 
-- Adding likes to polls
+- Adding likes to polls - most liked would be sent to the front/landing page
 - Adding likes to comments 
-- 
+- Sort/or have categories 
 
 ***
 
