@@ -90,15 +90,17 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create Backend Scaffold    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Add seed data and routes |    H     |     1 hrs      |      hrs     |     hrs    |
+| Create React App- file structure |    H     |      hrs      |      hrs     |     TBD     |
+| Build out routes  |    H     |     3 hrs      |      hrs     |     TBD     |
+| Build Landing page |    H     |     3 hrs      |      hrs     |     TBD     |
+| Build Home page |    H     |     3 hrs      |      hrs     |     TBD     |
+| Build Sign in Sign Up Forms |    H     |     3 hrs      |      hrs     |     TBD     |
+| Build Write Your Own Form |    H     |     3 hrs      |      hrs     |     TBD     |
+| Css basics for each layout|    H     |     8 hrs      |      hrs     |     TBD     |
+| advance css- animations, transitions|    H     |     4 hrs      |      hrs     |     TBD     |
+| TOTAL               |          |      hrs      |      hrs     |     TBD     |
 
 <br>
 
