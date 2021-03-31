@@ -8,7 +8,7 @@ export default function MainContainer(props) {
       <Route path="/">
         <Landing />
       </Route>
-      <Route path="/home">
+      {/* <Route path="/home">
         <Home handleCreate={handleCreate} />
       </Route>
       <Route path="/question/create">
@@ -22,7 +22,7 @@ export default function MainContainer(props) {
       </Route>
       <Route path="/account/:id">
         <Account />
-      </Route>
+      </Route> */}
     </Switch>
   );
 }
