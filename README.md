@@ -19,7 +19,7 @@
 
 ## Overview
 
-**Would You Rather** is an app where users can write and vote on "Would You Rather" questions. See if youre choices agree with the majority and debate your choices. 
+**Would You Rather** is an app where users can write and vote on "Would You Rather" questions. See if youre choices agree with the majority and debate in the comments below. 
 
 <br>
 
@@ -48,6 +48,9 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 |      React       | Create frontend |
 |   React Router   | To make routed enpoints for each page |
 | Rails | Creating backend: databases, models, and controllers |
+| Axios | Making calls to the database |
+| cors | ??|
+| BootStrap | Making the graphs for the questions(?)|
 |     Heroku     | To deploy the backend|
 |  Netlifiy  | To deploy the frontend |
 
@@ -56,14 +59,12 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 ### Client (Front End)
 
 #### Wireframes
-
-![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113079251-4eebcf00-919a-11eb-98b3-841bcf9c1c83.png)
-
 - Desktop Design All
+![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113145996-c2bac580-91f4-11eb-9ed0-1c00b05a2caa.png)
 
-![Mobile](https://user-images.githubusercontent.com/57376725/113079449-abe78500-919a-11eb-9d42-bd51c39146e1.png)
 
 - Mobile Design All
+![Mobile](https://user-images.githubusercontent.com/57376725/113145932-aae34180-91f4-11eb-93c3-d3f1d53a2176.png)
 
 
 #### Component Tree
@@ -80,10 +81,11 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
       |__ css/
           |__Home.css
 |__ components/
-      |__ Home.jsx
+      |__ Layout.jsx
+|__ screens/
+       |__Home.jsx
 |__ services/
       |__ Sort.jsx
-
 ```
 
 #### Time Estimates
@@ -91,16 +93,16 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create Backend Scaffold    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Add seed data and routes |    H     |     1 hrs      |      hrs     |     hrs    |
-| Create React App- file structure |    H     |      hrs      |      hrs     |     TBD     |
-| Build out routes  |    H     |     3 hrs      |      hrs     |     TBD     |
+| Add Routes and seed data|    H     |     1 hrs      |      hrs     |     hrs    |
+| Create React App- file structure |    H     |     1 hrs      |      hrs     |     TBD     |
+| Build out routes/front end  |    H     |     3 hrs      |      hrs     |     TBD     |
 | Build Landing page |    H     |     3 hrs      |      hrs     |     TBD     |
 | Build Home page |    H     |     3 hrs      |      hrs     |     TBD     |
 | Build Sign in Sign Up Forms |    H     |     3 hrs      |      hrs     |     TBD     |
 | Build Write Your Own Form |    H     |     3 hrs      |      hrs     |     TBD     |
 | Css basics for each layout|    H     |     8 hrs      |      hrs     |     TBD     |
 | advance css- animations, transitions|    H     |     4 hrs      |      hrs     |     TBD     |
-| TOTAL               |          |      hrs      |      hrs     |     TBD     |
+| TOTAL               |          |      30hrs      |      hrs     |     TBD     |
 
 <br>
 
