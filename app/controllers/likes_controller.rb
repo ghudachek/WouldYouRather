@@ -8,10 +8,6 @@ class LikesController < ApplicationController
     render json: @likes
   end
 
-  # GET /likes/1
-  def show
-    render json: @like
-  end
 
   # POST /likes
   def create
