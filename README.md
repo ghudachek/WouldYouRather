@@ -52,7 +52,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 |jwt| For user authentication|
 | Bootstrap | for graphs or other component styles(?)|
 |     Heroku     | To deploy the backend|
-|  Netlifiy  | To deploy the frontend |
+|  Netlify  | To deploy the frontend |
 
 <br>
 
