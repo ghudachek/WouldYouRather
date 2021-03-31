@@ -60,7 +60,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 #### Wireframes
 - Desktop Design All
-![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113145996-c2bac580-91f4-11eb-9ed0-1c00b05a2caa.png)
+![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113148679-bedc7280-91f7-11eb-97b5-7902279efc8d.png)
 
 
 - Mobile Design All
