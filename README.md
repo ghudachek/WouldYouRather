@@ -50,7 +50,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 | Rails | Creating backend: databases, models, and controllers |
 | Axios | Making calls to the database |
 |jwt| For user authentication|
-| BootStrap | Making the graphs for the questions(?)|
+| Bootstrap | for graphs or other component styles(?)|
 |     Heroku     | To deploy the backend|
 |  Netlifiy  | To deploy the frontend |
 
