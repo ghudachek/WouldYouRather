@@ -59,15 +59,16 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 ### Client (Front End)
 
 #### Wireframes
-- Desktop Design All
+- Desktop Design
 ![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113155155-5ba20e80-91fe-11eb-909a-9f627fa3a5e8.png)
 
 
 
 
 
-- Mobile Design All
-![Mobile](https://user-images.githubusercontent.com/57376725/113145932-aae34180-91f4-11eb-93c3-d3f1d53a2176.png)
+- Mobile Design
+![Mobile](https://user-images.githubusercontent.com/57376725/113155692-ebe05380-91fe-11eb-8ff6-29da0ac9714a.png)
+
 
 
 #### Component Tree
