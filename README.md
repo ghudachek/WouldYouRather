@@ -57,11 +57,11 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 #### Wireframes
 
-![Desktop Version](url)
+![Desktop Veiw](https://user-images.githubusercontent.com/57376725/113079251-4eebcf00-919a-11eb-98b3-841bcf9c1c83.png)
 
 - Desktop Design All
 
-[Mobile Version](url)
+![Mobile](https://user-images.githubusercontent.com/57376725/113079449-abe78500-919a-11eb-9d42-bd51c39146e1.png)
 
 - Mobile Design All
 
