@@ -1,19 +1,51 @@
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
-
+import { Route, Switch, useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layout/Layout";
+import { verifyUser, loginUser, joinUser, removeToken } from "./services/auth";
+import Join from "./screens/Join";
+import Login from "./screens/Login";
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+  //const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
+
+  const handleLogin = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    //useHistory("/home");
+  };
+
+  const handleJoin = async (formData) => {
+    const userData = await joinUser(formData);
+    setCurrentUser(userData);
+    //useHistory("/home");
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("authToken");
+    removeToken();
+  };
+
   return (
     <div className="App">
-      <Layout>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
-          <Route path="/register">
-            <Register handleRegister={handleRegister} />
+          <Route path="/Join">
+            <Join handleJoin={handleJoin} />
           </Route>
           <Route path="/">
             <MainContainer currentUser={currentUser} />
