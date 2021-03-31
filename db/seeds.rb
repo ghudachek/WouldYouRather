@@ -15,6 +15,7 @@ puts "#{User.count} users created"
 
 puts "#{Question.count} questions created!"
 
-@com1 = Comment.create!(post: 'tough choices!', user: @admin, question: @wyr1)
+@com1 = Comment.create!(user: @admin, question: @wyr1, post:'tough choices!')
+
 
 puts "#{Comment.count} comments created!"
