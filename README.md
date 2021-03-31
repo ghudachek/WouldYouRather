@@ -125,6 +125,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 - Adding likes to polls - most liked would be sent to the front/landing page
 - Adding likes to comments 
 - Sort/or have categories 
+- Changing progile images/ having a profile image
 
 ***
 
