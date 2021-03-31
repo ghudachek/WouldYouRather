@@ -126,6 +126,8 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 - Adding likes to comments 
 - Sort/or have categories 
 - Changing progile images/ having a profile image
+- light/dark modes
+- Color options for bar graphs(user decides)
 
 ***
 
