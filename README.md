@@ -69,7 +69,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 #### Component Tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree](https://whimsical.com/would-you-rather-UVfB72XZgXnCyczacZxmo4)
 
 #### Component Architecture 
 
@@ -112,7 +112,7 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-[ERD Sample](https://drive.google.com/file/d/1LyFXJTJjheOda322ZbsNUOTLZqq45_Oh/view?usp=sharing)
+[ERD](https://drive.google.com/file/d/1LyFXJTJjheOda322ZbsNUOTLZqq45_Oh/view?usp=sharing)
 <br>
 
 ***
