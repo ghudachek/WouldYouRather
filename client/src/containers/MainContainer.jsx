@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import { getAllQuestions } from "../services/questions";
+import { getAllQuestions, postQuestion } from "../services/questions";
 import {
   postComment,
   getAllComments,
@@ -9,6 +9,7 @@ import {
 } from "../services/comments";
 import Landing from "../screens/Landing";
 import Home from "../screens/Home";
+import Create from "../screens/CreateQuestion";
 
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
@@ -34,25 +35,22 @@ export default function MainContainer(props) {
     fetchComments();
   }, []);
 
-  const handleCreate = async (commentData) => {
-    const newComment = await postComment(commentData);
-    setComments((prevState) => [...prevState, newComment]);
-    history.push("/comments");
+  const handleCreateQuestions = async (questionData) => {
+    const newQuestion = await postQuestion(questionData);
+    setQuestions((prevState) => [...prevState, newQuestion]);
+    history.push("/home");
   };
 
-  const handleDelete = async (id) => {
-    await destroyComment(id);
-    setComments((prevState) =>
-      prevState.filter((comment) => comment.id !== id)
-    );
-  };
   return (
     <Switch>
       <Route exact path="/">
         <Landing questions={questions} />
       </Route>
       <Route path="/home">
-        <Home questions={questions} />
+        <Home questions={questions} comments={comments} />
+      </Route>
+      <Route to="/create">
+        <Create handleCreate={handleCreateQuestions} />
       </Route>
     </Switch>
   );
