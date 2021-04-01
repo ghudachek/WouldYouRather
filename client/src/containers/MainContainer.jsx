@@ -10,6 +10,7 @@ import {
 import Landing from "../screens/Landing";
 import Home from "../screens/Home";
 import Create from "../screens/CreateQuestion";
+import Account from "../screens/Account";
 
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
@@ -49,8 +50,14 @@ export default function MainContainer(props) {
       <Route path="/home">
         <Home questions={questions} comments={comments} />
       </Route>
-      <Route to="/create">
-        <Create handleCreate={handleCreateQuestions} />
+      <Route exact path="/create">
+        <Create
+          currentUser={currentUser}
+          handleCreate={handleCreateQuestions}
+        />
+      </Route>
+      <Route exact path="/account">
+        <Account user={currentUser} />
       </Route>
     </Switch>
   );
