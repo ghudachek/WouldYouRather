@@ -8,6 +8,7 @@ import {
   destroyComment,
 } from "../services/comments";
 import Landing from "../screens/Landing";
+import Home from "../screens/Home";
 
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
@@ -19,8 +20,10 @@ export default function MainContainer(props) {
     const fetchQuestions = async () => {
       const questionData = await getAllQuestions();
       setQuestions(questionData);
+      console.log("grabbed questions" + questions);
     };
     fetchQuestions();
+    console.log("grabbed questions" + questions);
   }, []);
 
   useEffect(() => {
@@ -45,24 +48,12 @@ export default function MainContainer(props) {
   };
   return (
     <Switch>
-      <Route path="/">
+      <Route exact path="/">
         <Landing questions={questions} />
       </Route>
-      {/* <Route path="/home">
-        <Home handleCreate={handleCreate} />
+      <Route path="/home">
+        <Home questions={questions} />
       </Route>
-      <Route path="/question/create">
-        <QuestionCreate />
-      </Route>
-      <Route path="/question/:id">
-        <QuestionDetails />
-      </Route>
-      <Route path="/question/edit/:id">
-        <QuestionEdit />
-      </Route>
-      <Route path="/account/:id">
-        <Account />
-      </Route> */}
     </Switch>
   );
 }

@@ -1,0 +1,22 @@
+.carousel-inner {
+  height: 20vh;
+  padding: 5px;
+}
+.block1,
+.block2 {
+  margin-top: 30px;
+  height: 10vh;
+}
+h3,
+h2 {
+  margin-top: 2\10px;
+  color: black;
+}
+.carousel-item {
+  display: flex;
+  height: 50vh;
+}
+.active-carousel-item {
+  display: flex;
+  height: 50vh;
+}

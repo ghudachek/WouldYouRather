@@ -9,7 +9,7 @@ import Login from "./screens/Login";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  //const history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -22,7 +22,7 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    //useHistory("/home");
+    history.push("/home");
   };
 
   const handleJoin = async (formData) => {

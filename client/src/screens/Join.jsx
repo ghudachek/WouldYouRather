@@ -5,8 +5,9 @@ export default function Join(props) {
     username: "",
     email: "",
     password: "",
+    passwordConfirm: "",
   });
-  const { username, email, password } = formData;
+  const { username, email, password, passwordConfirm } = formData;
   const { handleJoin } = props;
 
   const handleChange = (e) => {
@@ -50,6 +51,15 @@ export default function Join(props) {
         />
       </label>
       <br />
+      <label>
+        Password Confirm:
+        <input
+          type="password"
+          name="passwordConfrim"
+          value={passwordConfirm}
+          onChange={handleChange}
+        />
+      </label>
       <button>Submit</button>
     </form>
   );

@@ -1,37 +1,48 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-
+import "../designs/Landing.css";
+import { useEffect, useState } from "react";
 const Landing = (props) => {
   console.log(props.questions);
+
   return (
-    <div>
-      <Carousel fade>
-        <Carousel.Item>
-          <div className="question1">
-            <div className="block1">{props.questions[0].choice1}</div>
-            <div className="block2">{props.questions[0].choice2}</div>
-          </div>
-          <Carousel.Caption>
-            <h3>Would you rather...</h3>
-            <p>
-              {props.questions[0].choice1} or {props.questions[0].choice2}
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="question1">
-            <div className="block1">{props.questions[1].choice1}</div>
-            <div className="block2">{props.questions[1].choice2}</div>
-          </div>
-          <Carousel.Caption>
-            <h3>Would you rather...</h3>
-            <p>
-              {props.questions[1].choice1} or {props.questions[1].choice2}
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+    <>
+      {props.questions.length == 0 ? (
+        <p>
+          Loading
+          {console.log("not loading")}
+        </p>
+      ) : (
+        <div>
+          <Carousel>
+            <Carousel.Item>
+              <div className="d-block w-100">
+                <button className="block1">{props.questions[0].choice1}</button>
+                <button className="block2">{props.questions[0].choice2}</button>
+              </div>
+              <Carousel.Caption>
+                <h2>Would you rather...</h2>
+                <h3>
+                  {props.questions[0].choice1} or {props.questions[0].choice2}
+                </h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-block w-100">
+                <button className="block1">{props.questions[1].choice1}</button>
+                <button className="block2">{props.questions[1].choice2}</button>
+              </div>
+              <Carousel.Caption>
+                <h2>Would you rather...</h2>
+                <h3>
+                  {props.questions[1].choice1} or {props.questions[1].choice2}
+                </h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      )}
+    </>
   );
 };
 
