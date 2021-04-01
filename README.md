@@ -42,16 +42,16 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 ### Libraries and Dependencies
 
-|   Library    | Description                                          |
-| :----------: | :--------------------------------------------------- |
-|    React     | Create frontend                                      |
-| React Router | To make routed enpoints for each page                |
-|    Rails     | Creating backend: databases, models, and controllers |
-|    Axios     | Making calls to the database                         |
-|     jwt      | For user authentication                              |
-|  Bootstrap   | for graphs or other component styles(?)              |
-|    Heroku    | To deploy the backend                                |
-|   Netlify    | To deploy the frontend                               |
+|     Library     | Description                                          |
+| :-------------: | :--------------------------------------------------- |
+|      React      | Create frontend                                      |
+|  React Router   | To make routed enpoints for each page                |
+|      Rails      | Creating backend: databases, models, and controllers |
+|      Axios      | Making calls to the database                         |
+|       jwt       | For user authentication                              |
+| React Bootstrap | carousel on landing                                  |
+|     Heroku      | To deploy the backend                                |
+|     Netlify     | To deploy the frontend                               |
 
 <br>
 

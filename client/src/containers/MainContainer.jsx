@@ -1,12 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import { getAllQuestions, getOneQuestion } from "../services/questions";
+import { getAllQuestions } from "../services/questions";
 import {
   postComment,
   getAllComments,
   destroyComment,
-  putComment,
 } from "../services/comments";
 import Landing from "../screens/Landing";
 
@@ -38,16 +37,6 @@ export default function MainContainer(props) {
     history.push("/comments");
   };
 
-  const handleUpdate = async (id, commentData) => {
-    const updatedComment = await putComment(id, commentData);
-    setComments((prevState) =>
-      prevState.map((comment) => {
-        return comment.id === Number(id) ? updatedComment : comment;
-      })
-    );
-    history.push("/comments");
-  };
-
   const handleDelete = async (id) => {
     await destroyComment(id);
     setComments((prevState) =>
@@ -57,7 +46,7 @@ export default function MainContainer(props) {
   return (
     <Switch>
       <Route path="/">
-        <Landing />
+        <Landing questions={questions} />
       </Route>
       {/* <Route path="/home">
         <Home handleCreate={handleCreate} />

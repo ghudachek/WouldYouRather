@@ -1,21 +1,27 @@
 import api from "./api-config";
 
 export const getAllComments = async (id, commentData) => {
-  const resp = await api.get("/comments", { comment: commentData });
+  const resp = await api.get(`/questions/${id}/comments`, {
+    comment: commentData,
+  });
   return resp.data;
 };
 
-export const postComment = async (commentData) => {
-  const resp = await api.post("/comment", { comment: commentData });
+export const getOneComment = async (id, id2, commentData) => {
+  const resp = await api.get(`/questions/${id}/comments/${id2}`, {
+    comment: commentData,
+  });
   return resp.data;
 };
 
-export const putComment = async (id, commentData) => {
-  const resp = await api.put(`/comments/${id}`, { comment: commentData });
+export const postComment = async (id, commentData) => {
+  const resp = await api.post(`/questions/${id}/comments`, {
+    comment: commentData,
+  });
   return resp.data;
 };
 
-export const destroyComment = async (id) => {
-  const resp = await api.delete(`/comments/${id}`);
+export const destroyComment = async (id, id2) => {
+  const resp = await api.delete(`/questions/${id}/comments/${id2}`);
   return resp;
 };
