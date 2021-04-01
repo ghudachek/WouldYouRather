@@ -11,6 +11,7 @@ import Landing from "../screens/Landing";
 import Home from "../screens/Home";
 import Create from "../screens/CreateQuestion";
 import Account from "../screens/Account";
+import QuestionEdit from "../screens/QuestionEdit";
 
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
@@ -58,6 +59,9 @@ export default function MainContainer(props) {
       </Route>
       <Route exact path="/account">
         <Account user={currentUser} />
+      </Route>
+      <Route exact path="/edit/:id">
+        <QuestionEdit user={currentUser} />
       </Route>
     </Switch>
   );

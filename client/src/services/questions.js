@@ -16,7 +16,9 @@ export const postQuestion = async (questionData) => {
 };
 
 export const putQuestion = async (id, questionData) => {
-  const resp = await api.put(`/questions/${id}`, { question: questionData });
+  const resp = await api.put(`users/${id}/questions/${id}`, {
+    question: questionData,
+  });
   return resp.data;
 }; //for updating color??
 
