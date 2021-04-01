@@ -25,6 +25,9 @@ const Landing = (props) => {
                     Would you rather {props.questions[0].choice1} or{" "}
                     {props.questions[0].choice2}
                   </h3>
+                  <Link to="/join">
+                    <button className="join">Join The Debate</button>
+                  </Link>
                 </div>
               </div>
             </Carousel.Item>
@@ -42,7 +45,6 @@ const Landing = (props) => {
                   </Link>
                 </div>
               </div>
-              s
             </Carousel.Item>
           </Carousel>
         </div>

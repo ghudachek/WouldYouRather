@@ -3,3 +3,26 @@
   height: 100vh;
   color: white;
 }
+.layout header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  color: white;
+  margin-right: 10vw;
+  margin-left: 5px;
+}
+a.title-link:visited {
+  color: white;
+}
+
+.logout {
+  justify-content: right;
+
+  margin-right: 15px;
+}
+.links {
+  display: flex;
+  margin-left: 45vw;
+}

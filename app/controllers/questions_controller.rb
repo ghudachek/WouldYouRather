@@ -1,11 +1,11 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create]
   # GET /questions
   def index
     @questions = Question.all
 
-    render json: @questions
+    render json: @questions, include: :answers
   end
 
   # GET /questions/1
@@ -16,9 +16,9 @@ class QuestionsController < ApplicationController
   # POST /questions
   def create
     @question = Question.new(question_params)
-
+    @question.user = @current_user
     if @question.save
-      render json: @question, status: :created, location: @question
+      render json: @question, include: :answers, status: :created, location: @question
     else
       render json: @question.errors, status: :unprocessable_entity
     end

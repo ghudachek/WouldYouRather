@@ -9,30 +9,30 @@ export default function Layout(props) {
       <header>
         {currentUser ? (
           <>
-            <Link to="/home">
-              <h1>Would You Rather</h1>
+            <Link className="title-link" to="/home">
+              <h1 className="logo-title">Would You Rather</h1>
             </Link>
-            <p>{currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
+            <div className="links">
+              <p>Hello {currentUser.username}</p>
+              <Link to="/account">Account</Link>
+              <br />
+              <Link to="/create">Write Your Own</Link>
+              <button className="logout" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+            <hr />
           </>
         ) : (
           <>
-            <Link to="/">
-              <h1>Would You Rather</h1>
+            <Link className="title-link" to="/">
+              <h1 className="logo-title">Would You Rather</h1>
             </Link>
             <Link to="/login">Login/Join</Link>
           </>
         )}
       </header>
-      <hr />
-      {currentUser && (
-        <>
-          <Link to="/account">Account</Link>
-          <br />
-          <Link to="/create">Write Your Own</Link>
-          <hr />
-        </>
-      )}
+
       {props.children}
     </div>
   );

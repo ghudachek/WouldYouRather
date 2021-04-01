@@ -60,6 +60,7 @@ export default function Join(props) {
           onChange={handleChange}
         />
       </label>
+      <br />
       <button>Submit</button>
     </form>
   );

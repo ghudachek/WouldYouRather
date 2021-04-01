@@ -4,18 +4,17 @@ import "../designs/Home.css";
 const Home = (props) => {
   return (
     <>
-      <div>
-        <p>This is the Home page</p>
+      <div className="questions-div">
         {props.questions?.map((question) => (
-          <>
-            <h2>Would You Rather:</h2>
-            <h3>
-              {question.choice1} or {question.choice1}
-            </h3>
-            <button className="choice">{question.choice1}</button>
-            <button className="choice">{question.choice2}</button>
+          <div className="question-card">
             <button className="likes">Like</button>
-          </>
+            <br />
+            <button className="choice1">{question.choice1}</button>
+            <button className="choice2">{question.choice2}</button>
+            <h3>
+              Would You Rather: {question.choice1} or {question.choice2}
+            </h3>
+          </div>
         ))}
       </div>
     </>
