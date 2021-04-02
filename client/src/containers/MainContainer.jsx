@@ -35,6 +35,7 @@ export default function MainContainer(props) {
       setComments(commentData);
     };
     fetchComments();
+    console.log("comments" + comments);
   }, []);
 
   const handleCreateQuestions = async (questionData) => {

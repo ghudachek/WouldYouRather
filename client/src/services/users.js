@@ -6,7 +6,11 @@ export const destroyUser = async (id) => {
 };
 
 export const getUser = async (id) => {
-  const resp = await api.get(`/user/${id}`);
+  const resp = await api.get(`/users/${id}`);
+  return resp.data;
+};
+export const getAllUsers = async () => {
+  const resp = await api.get(`/users`);
   return resp.data;
 };
 

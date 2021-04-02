@@ -1,7 +1,19 @@
 import React from "react";
 import {} from "module";
 import "../designs/Home.css";
+import { getAllUsers } from "../services/users";
+import { useState, useEffect } from "react";
 const Home = (props) => {
+  const [users, setUsers] = useState();
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const userData = await getAllUsers();
+      setUsers(userData);
+    };
+    fetchUsers();
+  }, []);
+
   return (
     <>
       <div className="questions-div">
@@ -14,6 +26,22 @@ const Home = (props) => {
             <h3>
               Would You Rather: {question.choice1} or {question.choice2}
             </h3>
+            {props.comments.length !== 0
+              ? props.comments.map((comment) => {
+                  if (comment.question_id === question.id) {
+                    return (
+                      <>
+                        <h4>
+                          {users.map((user) =>
+                            user.id === comment.user_id ? user.username : null
+                          )}
+                        </h4>
+                        <h4>{comment.post}</h4>
+                      </>
+                    );
+                  }
+                })
+              : null}
           </div>
         ))}
       </div>
