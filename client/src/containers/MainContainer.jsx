@@ -76,7 +76,11 @@ export default function MainContainer(props) {
         />
       </Route>
       <Route exact path="/account">
-        <Account user={currentUser} handleDelete={handleDelete} />
+        <Account
+          user={currentUser}
+          handleDelete={handleDelete}
+          questions={questions}
+        />
       </Route>
       <Route exact path="/edit/:id">
         <QuestionEdit user={currentUser} />

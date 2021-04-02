@@ -2,17 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { getUserQuestions } from "../services/users";
-import { getAllQuestions, destroyQuestion } from "../services/questions";
 
 import "../designs/Account.css";
 const Account = (props) => {
   const [userQuestions, setUserQuestions] = useState();
-
+  const userQuestionData = [];
   useEffect(() => {
-    const fetchUserQuestions = async () => {
-      const userQuestionData = await getUserQuestions();
+    function fetchUserQuestions() {
+      props.questions?.map((question) => {
+        if (question.user_id === props.user.id) {
+          userQuestionData.push(question);
+        }
+      });
       setUserQuestions(userQuestionData);
-    };
+    }
     fetchUserQuestions();
   }, [props.handleDelete]);
 
@@ -34,7 +37,6 @@ const Account = (props) => {
           <h2>Your W.Y.Rs:</h2>
           {userQuestions?.map((question) => (
             <div className="one-wyr">
-              {console.log(question.id)}
               <h4>Would You Rather</h4>
               <div className="user-block-1">Choice 1: {question.choice1}</div>
               or

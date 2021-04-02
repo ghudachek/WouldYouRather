@@ -7,9 +7,7 @@ import { getAnswers, postAnswer, putAnswer } from "../services/answers";
 const Home = (props) => {
   const [answers, setAnswers] = useState([]);
   const history = useHistory();
-  // const [answerData, setAnswerData] = useState({
-  //   choice: "",
-  // });
+
   useEffect(() => {
     const fetchAnswers = async () => {
       const answerData = await getAnswers();
@@ -28,14 +26,6 @@ const Home = (props) => {
     const updatedAnswer = await putAnswer(id, answer);
     setAnswers((prevState) => [...prevState, updatedAnswer]);
   };
-
-  // const handleChoice = (e) => {
-  //   const { name, value } = e.target;
-  //   setAnswerData((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
 
   return (
     <>
