@@ -28,6 +28,8 @@ export default function MainContainer(props) {
       const questionData = await getAllQuestions();
       setQuestions(questionData);
       console.log("grabbed questions" + questions);
+      console.log(questions);
+      console.log(questions.id);
     };
     fetchQuestions();
     console.log("grabbed questions" + questions);

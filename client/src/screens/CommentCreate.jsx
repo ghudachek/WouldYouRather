@@ -5,10 +5,8 @@ const CommentCreate = (props) => {
   const { handleCreate, questionId, userId } = props;
   const [commentData, setCommentData] = useState({
     post: "",
-    question_id: questionId,
-    user_id: userId,
   });
-  const { post, question_id, user_id } = commentData;
+  //const { post } = commentData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +20,7 @@ const CommentCreate = (props) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handleCreate(commentData);
+        handleCreate(questionId, commentData);
         console.log(commentData);
       }}
     >
@@ -31,7 +29,7 @@ const CommentCreate = (props) => {
         <input
           type="text"
           name="post"
-          value={post}
+          value={commentData.post}
           onChange={handleChange}
         ></input>
       </label>
