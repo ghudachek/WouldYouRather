@@ -16,11 +16,12 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
+    @question = Question.find(params[:question_id])
     @comment = Comment.new(comment_params)
     @comment.user = @current_user
-    @comment.question = @question = Question.find(params[:id])
+    @comment.question= @question
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render json: @comment, status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
     end

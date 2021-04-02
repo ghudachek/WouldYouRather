@@ -49,8 +49,8 @@ export default function MainContainer(props) {
     history.push("/home");
   };
 
-  const handleCreateComments = async (commentData) => {
-    const newComment = await postComment(commentData);
+  const handleCreateComments = async (id, commentData) => {
+    const newComment = await postComment(id, commentData);
     setComments((prevState) => [...prevState, newComment]);
   };
   const handleDelete = async (id) => {

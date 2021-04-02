@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const CommentCreate = (props) => {
-  const { handleCreate, questionId, userId } = props;
+  const { handleCreate, questionId } = props;
   const [commentData, setCommentData] = useState({
     post: "",
   });

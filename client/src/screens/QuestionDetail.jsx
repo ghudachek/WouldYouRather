@@ -57,7 +57,6 @@ const QuestionDetail = (props) => {
           <CommentCreate
             handleCreate={props.handleCreateComments}
             questionId={question.id}
-            userId={props.currentUser.id}
           />
           <Link to="/home">Home</Link>
         </div>
