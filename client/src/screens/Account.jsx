@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { getUserQuestions } from "../services/users";
+import { getAllQuestions, destroyQuestion } from "../services/questions";
 
 const Account = (props) => {
   const [userQuestions, setUserQuestions] = useState();
@@ -13,8 +14,6 @@ const Account = (props) => {
     };
     fetchUserQuestions();
   }, []);
-
-  console.log(props.user);
 
   return (
     <>
@@ -35,10 +34,7 @@ const Account = (props) => {
               <div className="user-block-1">Choice 1: {question.choice1}</div>
               or
               <div className="user-block-2">Choice 2: {question.choice2}</div>
-              <button>Delete</button>
-              <Link to="/edit/:id">
-                <button>Edit</button>
-              </Link>
+              <button onClick={() => props.handleDelete()}>Delete</button>
             </>
           ))}
         </div>

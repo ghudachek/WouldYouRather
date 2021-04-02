@@ -32,7 +32,7 @@ const Home = (props) => {
                     return (
                       <>
                         <h4>
-                          {users.map((user) =>
+                          {users?.map((user) =>
                             user.id === comment.user_id ? user.username : null
                           )}
                         </h4>
@@ -42,6 +42,10 @@ const Home = (props) => {
                   }
                 })
               : null}
+            <label>
+              Comment:<input></input>
+            </label>
+            <button>send</button>
           </div>
         ))}
       </div>

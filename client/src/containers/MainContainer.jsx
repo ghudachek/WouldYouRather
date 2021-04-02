@@ -1,7 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import { getAllQuestions, postQuestion } from "../services/questions";
+import {
+  getAllQuestions,
+  postQuestion,
+  destroyQuestion,
+} from "../services/questions";
 import {
   postComment,
   getAllComments,
@@ -35,7 +39,6 @@ export default function MainContainer(props) {
       setComments(commentData);
     };
     fetchComments();
-    console.log("comments" + comments);
   }, []);
 
   const handleCreateQuestions = async (questionData) => {
@@ -44,6 +47,13 @@ export default function MainContainer(props) {
     history.push("/home");
   };
 
+  const handleDelete = async (id) => {
+    await destroyQuestion(id);
+    setQuestions((prevState) =>
+      prevState.filter((question) => question.id !== id)
+    );
+    history.push("/home");
+  };
   return (
     <Switch>
       <Route exact path="/">
@@ -59,7 +69,7 @@ export default function MainContainer(props) {
         />
       </Route>
       <Route exact path="/account">
-        <Account user={currentUser} />
+        <Account user={currentUser} handleDelete={handleDelete} />
       </Route>
       <Route exact path="/edit/:id">
         <QuestionEdit user={currentUser} />
