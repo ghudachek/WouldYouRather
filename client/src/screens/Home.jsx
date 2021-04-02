@@ -1,20 +1,8 @@
 import React from "react";
-import {} from "module";
+import { Link } from "react-router-dom";
 import "../designs/Home.css";
-import { getAllUsers } from "../services/users";
-import { useState, useEffect } from "react";
-import CommentCreate from "./CommentCreate";
-const Home = (props) => {
-  const [users, setUsers] = useState();
-  console.log(props.currentUser);
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const userData = await getAllUsers();
-      setUsers(userData);
-    };
-    fetchUsers();
-  }, []);
 
+const Home = (props) => {
   return (
     <>
       <div className="questions-div">
@@ -27,27 +15,7 @@ const Home = (props) => {
             <h3>
               Would You Rather: {question.choice1} or {question.choice2}
             </h3>
-            {props.comments.length !== 0
-              ? props.comments.map((comment) => {
-                  if (comment.question_id === question.id) {
-                    return (
-                      <>
-                        <h4>
-                          {users?.map((user) =>
-                            user.id === comment.user_id ? user.username : null
-                          )}
-                        </h4>
-                        <h4>{comment.post}</h4>
-                      </>
-                    );
-                  }
-                })
-              : null}
-            <CommentCreate
-              handleCreate={props.handleCreateComments}
-              questionId={question.id}
-              userId={props.currentUser.id}
-            />
+            <Link to={`/questions/${question.id}/detail`}>See Debate</Link>
           </div>
         ))}
       </div>

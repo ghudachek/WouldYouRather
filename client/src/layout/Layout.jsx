@@ -10,7 +10,7 @@ export default function Layout(props) {
         {currentUser ? (
           <>
             <Link className="title-link" to="/home">
-              <h1 className="logo-title">Would You Rather</h1>
+              <h1 className="logo-title">Would You Rather?</h1>
             </Link>
             <div className="links">
               <p>Hello {currentUser.username}</p>

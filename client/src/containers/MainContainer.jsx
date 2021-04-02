@@ -16,7 +16,7 @@ import Home from "../screens/Home";
 import Create from "../screens/CreateQuestion";
 import Account from "../screens/Account";
 import QuestionEdit from "../screens/QuestionEdit";
-
+import QuestionDetail from "../screens/QuestionDetail";
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
   const [comments, setComments] = useState([]);
@@ -82,6 +82,14 @@ export default function MainContainer(props) {
       </Route>
       <Route exact path="/edit/:id">
         <QuestionEdit user={currentUser} />
+      </Route>
+      <Route path="/questions/:id/detail">
+        <QuestionDetail
+          currentUser={currentUser}
+          questions={questions}
+          comments={comments}
+          handleCreateComments={handleCreateComments}
+        />
       </Route>
     </Switch>
   );
