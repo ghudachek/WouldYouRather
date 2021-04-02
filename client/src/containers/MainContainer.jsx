@@ -65,6 +65,7 @@ export default function MainContainer(props) {
       </Route>
       <Route path="/home">
         <Home
+          currentUser={currentUser}
           questions={questions}
           comments={comments}
           handleCreateComments={handleCreateComments}

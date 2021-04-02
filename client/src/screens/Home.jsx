@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import CommentCreate from "./CommentCreate";
 const Home = (props) => {
   const [users, setUsers] = useState();
-
+  console.log(props.currentUser);
   useEffect(() => {
     const fetchUsers = async () => {
       const userData = await getAllUsers();
@@ -46,6 +46,7 @@ const Home = (props) => {
             <CommentCreate
               handleCreate={props.handleCreateComments}
               questionId={question.id}
+              userId={props.currentUser.id}
             />
           </div>
         ))}

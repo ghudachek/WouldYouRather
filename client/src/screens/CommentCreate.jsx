@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 
 const CommentCreate = (props) => {
-  const { handleCreate, questionId } = props;
+  const { handleCreate, questionId, userId } = props;
   const [commentData, setCommentData] = useState({
     post: "",
     question_id: questionId,
+    user_id: userId,
   });
-  const { post, question_id } = commentData;
+  const { post, question_id, user_id } = commentData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +23,7 @@ const CommentCreate = (props) => {
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(commentData);
+        console.log(commentData);
       }}
     >
       <label>
