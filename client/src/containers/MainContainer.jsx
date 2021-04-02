@@ -47,6 +47,10 @@ export default function MainContainer(props) {
     history.push("/home");
   };
 
+  const handleCreateComments = async (commentData) => {
+    const newComment = await postComment(commentData);
+    setComments((prevState) => [...prevState, newComment]);
+  };
   const handleDelete = async (id) => {
     await destroyQuestion(id);
     setQuestions((prevState) =>
@@ -60,7 +64,11 @@ export default function MainContainer(props) {
         <Landing questions={questions} />
       </Route>
       <Route path="/home">
-        <Home questions={questions} comments={comments} />
+        <Home
+          questions={questions}
+          comments={comments}
+          handleCreateComments={handleCreateComments}
+        />
       </Route>
       <Route exact path="/create">
         <Create

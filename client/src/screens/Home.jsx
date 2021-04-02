@@ -3,6 +3,7 @@ import {} from "module";
 import "../designs/Home.css";
 import { getAllUsers } from "../services/users";
 import { useState, useEffect } from "react";
+import CommentCreate from "./CommentCreate";
 const Home = (props) => {
   const [users, setUsers] = useState();
 
@@ -42,10 +43,10 @@ const Home = (props) => {
                   }
                 })
               : null}
-            <label>
-              Comment:<input></input>
-            </label>
-            <button>send</button>
+            <CommentCreate
+              handleCreate={props.handleCreateComments}
+              questionId={question.id}
+            />
           </div>
         ))}
       </div>
