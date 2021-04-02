@@ -1,0 +1,60 @@
+.account {
+  display: grid;
+  grid-template-areas:
+    "hd hd hd hd"
+    "ac ac . ."
+    "wyr wyr wyr wyr"
+    "ft ft ft ft";
+}
+.acct-info {
+  grid-area: ac;
+  justify-content: right;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  font-size: 35px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+}
+.acct-info p {
+  padding-left: 5vw;
+}
+.acct-info h2 {
+  font-size: 50px;
+  text-align: left;
+  text-decoration: underline pink;
+}
+.welcome {
+  grid-area: hd;
+}
+.user-wyr {
+  grid-area: wyr;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.user-wyr h2 {
+  font-size: 50px;
+  text-decoration: underline pink;
+}
+.one-wyr {
+  border: 2px solid white;
+  margin: 40px;
+  height: 20vh;
+  width: 20vh;
+  font-size: 30px;
+}
+.one-wyr h4 {
+  font-size: 40px;
+}
+
+.round {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 100%;
+  border: 5px solid pink;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2vh;
+}

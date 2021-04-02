@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { getUserQuestions } from "../services/users";
 import { getAllQuestions, destroyQuestion } from "../services/questions";
 
+import "../designs/Account.css";
 const Account = (props) => {
   const [userQuestions, setUserQuestions] = useState();
 
@@ -17,19 +18,22 @@ const Account = (props) => {
 
   return (
     <>
-      <div>
-        <p>
-          This is the Account page <br /> Welcome {props.user?.username}!
-        </p>
-        <h2>Your Information:</h2>
-        <p>Email:{props.user?.email}</p>
-        <p>Username:{props.user?.username}</p>
-        <img src={props.user?.img} alt="profile-pic" />
-        <button>Delete Account</button>
+      <div className="account">
+        <h1 className="welcome">Welcome {props.user?.username}!</h1>
+        <div className="acct-info">
+          <h2>Your Information:</h2>
+          <div
+            className="round"
+            style={{ backgroundImage: `url(${props.user?.image})` }}
+          ></div>
+          <p>Email: {props.user?.email}</p>
+          <p>Username: {props.user?.username}</p>
+        </div>
+
         <div className="user-wyr">
-          <h2>Your WYRs:</h2>
+          <h2>Your W.Y.Rs:</h2>
           {userQuestions?.map((question) => (
-            <>
+            <div className="one-wyr">
               {console.log(question.id)}
               <h4>Would You Rather</h4>
               <div className="user-block-1">Choice 1: {question.choice1}</div>
@@ -38,7 +42,7 @@ const Account = (props) => {
               <button onClick={() => props.handleDelete(question.id)}>
                 Delete
               </button>
-            </>
+            </div>
           ))}
         </div>
       </div>
