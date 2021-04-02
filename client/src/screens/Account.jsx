@@ -13,7 +13,7 @@ const Account = (props) => {
       setUserQuestions(userQuestionData);
     };
     fetchUserQuestions();
-  }, []);
+  }, [props.handleDelete]);
 
   return (
     <>
@@ -30,11 +30,14 @@ const Account = (props) => {
           <h2>Your WYRs:</h2>
           {userQuestions?.map((question) => (
             <>
+              {console.log(question.id)}
               <h4>Would You Rather</h4>
               <div className="user-block-1">Choice 1: {question.choice1}</div>
               or
               <div className="user-block-2">Choice 2: {question.choice2}</div>
-              <button onClick={() => props.handleDelete()}>Delete</button>
+              <button onClick={() => props.handleDelete(question.id)}>
+                Delete
+              </button>
             </>
           ))}
         </div>

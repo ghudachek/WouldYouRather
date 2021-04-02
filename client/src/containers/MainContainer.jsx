@@ -52,7 +52,7 @@ export default function MainContainer(props) {
     setQuestions((prevState) =>
       prevState.filter((question) => question.id !== id)
     );
-    history.push("/home");
+    history.push("/account");
   };
   return (
     <Switch>
