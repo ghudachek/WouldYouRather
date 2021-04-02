@@ -28,7 +28,7 @@ function App() {
   const handleJoin = async (formData) => {
     const userData = await joinUser(formData);
     setCurrentUser(userData);
-    //useHistory("/home");
+    history.push("/home");
   };
 
   const handleLogout = () => {
