@@ -6,7 +6,6 @@ const CommentCreate = (props) => {
   const [commentData, setCommentData] = useState({
     post: "",
   });
-  //const { post } = commentData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;

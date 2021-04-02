@@ -15,10 +15,12 @@ class AnswersController < ApplicationController
 
   # POST /answers
   def create
+    @question =Question.find(params[:question_id])
     @answer = Answer.new(answer_params)
     @answer.user = @current_user
+    @answer.question= @question
     if @answer.save
-      render json: @answer, status: :created, location: @answer
+      render json: @answer, status: :created
     else
       render json: @answer.errors, status: :unprocessable_entity
     end

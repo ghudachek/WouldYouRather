@@ -1,22 +1,72 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "../designs/Home.css";
+import { getAnswers, postAnswer, putAnswer } from "../services/answers";
 
 const Home = (props) => {
+  const [answers, setAnswers] = useState([]);
+  const history = useHistory();
+  // const [answerData, setAnswerData] = useState({
+  //   choice: "",
+  // });
+  useEffect(() => {
+    const fetchAnswers = async () => {
+      const answerData = await getAnswers();
+      setAnswers(answerData);
+    };
+    fetchAnswers();
+    console.log(answers);
+  }, []);
+
+  const handleCreateAnswers = async (id, answer) => {
+    const newAnswer = await postAnswer(id, answer);
+    setAnswers((prevState) => [...prevState, newAnswer]);
+    history.push("/home");
+  };
+  const handleUpdateAnswer = async (id, answer) => {
+    const updatedAnswer = await putAnswer(id, answer);
+    setAnswers((prevState) => [...prevState, updatedAnswer]);
+  };
+
+  // const handleChoice = (e) => {
+  //   const { name, value } = e.target;
+  //   setAnswerData((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
+
   return (
     <>
       <div className="questions-div">
         {props.questions?.map((question) => (
-          <div className="question-card">
+          <form className="question-card">
             <button className="likes">Like</button>
             <br />
-            <button className="choice1">{question.choice1}</button>
-            <button className="choice2">{question.choice2}</button>
+            <input
+              type="button"
+              value={question.choice1}
+              className="choice1"
+              onClick={(e) => {
+                e.preventDefault();
+                handleCreateAnswers(question.id, { choice: "1" });
+              }}
+            ></input>
+            <input
+              type="button"
+              value={question.choice2}
+              className="choice2"
+              onClick={(e) => {
+                e.preventDefault();
+                handleCreateAnswers(question.id, { choice: "2" });
+              }}
+            ></input>
             <h3>
               Would You Rather: {question.choice1} or {question.choice2}
             </h3>
             <Link to={`/questions/${question.id}/detail`}>See Debate</Link>
-          </div>
+          </form>
         ))}
       </div>
     </>
