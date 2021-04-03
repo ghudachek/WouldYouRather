@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 const EditProfile = (props) => {
-  const { user, updateUser } = props;
+  const { user, handleUpdateUser } = props;
   const history = useHistory();
   const [formData, setFormData] = useState({
     image: "",
@@ -28,7 +28,10 @@ const EditProfile = (props) => {
   return (
     <form
       className="acct-info"
-      onSubmit={((e) => e.preventDefault(), updateUser(user?.id, formData))}
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleUpdateUser(user?.id, formData);
+      }}
     >
       <h2>Your Information:</h2>
       <div

@@ -39,13 +39,12 @@ function App() {
     history.push("/");
   };
 
-  useEffect(() => {
-    const updateUser = async (id, userData) => {
-      const update = await updateUser(id, userData);
-      setCurrentUser((prevState) => [...prevState, update]);
-      history.push("/account");
-    };
-  }, []);
+  const handleUpdateUser = async (id, userData) => {
+    const update = await updateUser(id, userData);
+    setCurrentUser(update);
+    history.push("/account");
+    console.log(currentUser);
+  };
 
   return (
     <div className="App">
@@ -58,7 +57,10 @@ function App() {
             <Join handleJoin={handleJoin} />
           </Route>
           <Route path="/">
-            <MainContainer currentUser={currentUser} updateUser={updateUser} />
+            <MainContainer
+              currentUser={currentUser}
+              handleUpdateUser={handleUpdateUser}
+            />
           </Route>
         </Switch>
       </Layout>

@@ -100,7 +100,10 @@ export default function MainContainer(props) {
         />
       </Route>
       <Route path="/user/edit">
-        <EditProfile user={currentUser} updateUser={props.updateUser} />
+        <EditProfile
+          user={currentUser}
+          handleUpdateUser={props.handleUpdateUser}
+        />
       </Route>
     </Switch>
   );
