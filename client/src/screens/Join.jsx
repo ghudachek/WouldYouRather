@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 
 export default function Join(props) {
   const [formData, setFormData] = useState({
@@ -8,7 +7,6 @@ export default function Join(props) {
     password: "",
     image: "",
   });
-  const history = useHistory();
   const { username, email, password, image } = formData;
   const { handleJoin } = props;
   const images = [

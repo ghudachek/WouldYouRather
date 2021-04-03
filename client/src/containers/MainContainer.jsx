@@ -49,6 +49,13 @@ export default function MainContainer(props) {
     const newComment = await postComment(id, commentData);
     setComments((prevState) => [...prevState, newComment]);
   };
+  const handleDeleteComment = async (id) => {
+    await destroyComment(id);
+    setComments((prevState) =>
+      prevState.filter((comment) => comment.id !== id)
+    );
+  };
+
   const handleDelete = async (id) => {
     await destroyQuestion(id);
     setQuestions((prevState) =>
@@ -77,9 +84,11 @@ export default function MainContainer(props) {
       </Route>
       <Route exact path="/account">
         <Account
+          comments={comments}
           user={currentUser}
           handleDelete={handleDelete}
           questions={questions}
+          handleDeleteComment={handleDeleteComment}
         />
       </Route>
       <Route exact path="/edit/:id">

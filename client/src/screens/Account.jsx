@@ -1,12 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { getUserQuestions } from "../services/users";
+import { getUser, getUserQuestions } from "../services/users";
 
 import "../designs/Account.css";
 const Account = (props) => {
   const [userQuestions, setUserQuestions] = useState();
+  const [userComments, setUserComments] = useState();
   const userQuestionData = [];
+  const userCommentData = [];
+
   useEffect(() => {
     function fetchUserQuestions() {
       props.questions?.map((question) => {
@@ -18,6 +21,18 @@ const Account = (props) => {
     }
     fetchUserQuestions();
   }, [props.handleDelete]);
+
+  useEffect(() => {
+    function fetchUserComments() {
+      props.comments?.map((comment) => {
+        if (comment.user_id === props.user.id) {
+          userCommentData.push(comment);
+        }
+      });
+      setUserComments(userCommentData);
+    }
+    fetchUserComments();
+  }, [props.handleCommentDelete]);
 
   return (
     <>
@@ -32,7 +47,14 @@ const Account = (props) => {
           <p>Email: {props.user?.email}</p>
           <p>Username: {props.user?.username}</p>
         </div>
-
+        <div className="comments">
+          Your Comments:{" "}
+          {userComments?.map((comment) => (
+            <div className="one-comment">
+              <p>{comment.post}</p>
+            </div>
+          ))}
+        </div>
         <div className="user-wyr">
           <h2>Your W.Y.Rs:</h2>
           {userQuestions?.map((question) => (

@@ -20,7 +20,6 @@ const CommentCreate = (props) => {
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(questionId, commentData);
-        console.log(commentData);
       }}
     >
       <label>

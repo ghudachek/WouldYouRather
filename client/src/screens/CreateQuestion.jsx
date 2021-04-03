@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { CirclePicker } from "react-color";
 
 const CreateQuestion = (props) => {
   const [formData, setFormData] = useState({
@@ -8,7 +7,6 @@ const CreateQuestion = (props) => {
     choice2: "",
   });
   const { choice1, choice2 } = formData;
-  const [color, setColor] = useState();
   const { handleCreate } = props;
 
   const handleChange = (e) => {
@@ -48,7 +46,6 @@ const CreateQuestion = (props) => {
           onChange={handleChange}
         />
       </label>
-      <CirclePicker block />
       <br />
       <button>Create</button>
     </form>
