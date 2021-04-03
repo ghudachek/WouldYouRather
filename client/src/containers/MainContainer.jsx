@@ -17,6 +17,8 @@ import Create from "../screens/CreateQuestion";
 import Account from "../screens/Account";
 import QuestionDetail from "../screens/QuestionDetail";
 import EditProfile from "../screens/EditProfile";
+import { postAnswer } from "../services/answers";
+
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
   const [comments, setComments] = useState([]);
@@ -30,6 +32,15 @@ export default function MainContainer(props) {
     };
     fetchQuestions();
   }, []);
+
+  const handleCreateAnswers = async (id, answer) => {
+    const newQuestion = await postAnswer(id, answer);
+    setQuestions((prevState) =>
+      prevState.map((question) => {
+        return question.id === id ? newQuestion : question;
+      })
+    );
+  };
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -74,6 +85,7 @@ export default function MainContainer(props) {
           questions={questions}
           comments={comments}
           handleCreateComments={handleCreateComments}
+          handleCreateAnswers={handleCreateAnswers}
         />
       </Route>
       <Route exact path="/create">

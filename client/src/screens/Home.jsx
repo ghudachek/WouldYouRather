@@ -7,7 +7,10 @@ const Home = (props) => {
     <>
       <div className="questions-div">
         {props.questions?.map((question) => (
-          <QuestionCard question={question} />
+          <QuestionCard
+            question={question}
+            handleCreateAnswers={props.handleCreateAnswers}
+          />
         ))}
       </div>
     </>
