@@ -15,7 +15,6 @@ import Landing from "../screens/Landing";
 import Home from "../screens/Home";
 import Create from "../screens/CreateQuestion";
 import Account from "../screens/Account";
-import QuestionEdit from "../screens/QuestionEdit";
 import QuestionDetail from "../screens/QuestionDetail";
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
@@ -90,9 +89,6 @@ export default function MainContainer(props) {
           questions={questions}
           handleDeleteComment={handleDeleteComment}
         />
-      </Route>
-      <Route exact path="/edit/:id">
-        <QuestionEdit user={currentUser} />
       </Route>
       <Route path="/questions/:id/detail">
         <QuestionDetail

@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   def show
-    render json: @question, include: :comments
+    render json: @question, include: [:answers, :comments]
   end
 
   # POST /questions
@@ -33,6 +33,11 @@ class QuestionsController < ApplicationController
       render json: @question.errors, status: :unprocessable_entity
     end
   end
+
+def questionAnswers
+  @question = Question.find(params[:id])
+  @answers = Answer.find(question_id == @question.id)
+end 
 
   # DELETE /questions/1
   def destroy

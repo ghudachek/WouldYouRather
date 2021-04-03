@@ -30,7 +30,6 @@ const QuestionDetail = (props) => {
     <div className="question-div">
       {question ? (
         <div className="question-card">
-          {console.log(question.id)}
           <button className="likes">Like</button>
           <br />
           <button className="choice1">{question.choice1}</button>
