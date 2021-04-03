@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import { verifyUser, loginUser, joinUser, removeToken } from "./services/auth";
 import Join from "./screens/Join";
 import Login from "./screens/Login";
+import { updateUser } from "./services/users";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -38,6 +39,14 @@ function App() {
     history.push("/");
   };
 
+  useEffect(() => {
+    const updateUser = async (id, userData) => {
+      const update = await updateUser(id, userData);
+      setCurrentUser((prevState) => [...prevState, update]);
+      history.push("/account");
+    };
+  }, []);
+
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
@@ -49,7 +58,7 @@ function App() {
             <Join handleJoin={handleJoin} />
           </Route>
           <Route path="/">
-            <MainContainer currentUser={currentUser} />
+            <MainContainer currentUser={currentUser} updateUser={updateUser} />
           </Route>
         </Switch>
       </Layout>

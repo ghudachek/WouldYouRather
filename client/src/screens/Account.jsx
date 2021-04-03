@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { getUser, getUserQuestions } from "../services/users";
 
 import "../designs/Account.css";
 const Account = (props) => {
@@ -46,9 +45,10 @@ const Account = (props) => {
           ></div>
           <p>Email: {props.user?.email}</p>
           <p>Username: {props.user?.username}</p>
+          <Link to="/user/edit">Edit Profile</Link>
         </div>
         <div className="comments">
-          Your Comments:{" "}
+          Your Comments:
           {userComments?.map((comment) => (
             <div className="one-comment">
               <p>{comment.post}</p>

@@ -8,22 +8,18 @@ export const QuestionCard = (props) => {
   const [style1, setStyle1] = useState("choice1");
   const [style2, setStyle2] = useState("choice2");
   const [answers, setAnswers] = useState([]);
-  const [choice1, setChoice1] = useState(0);
-  const [choice2, setChoice2] = useState(0);
+  const [choice1, setChoice1] = useState();
+  const [choice2, setChoice2] = useState();
   const history = useHistory();
 
-  const handleUpdateAnswer = async (id, answer) => {
-    const updatedAnswer = await putAnswer(id, answer);
-    setAnswers((prevState) => [...prevState, updatedAnswer]);
-  };
-
   function groupAnswers() {
-    question.answers?.filter((ans) => {
+    question.answers?.map((ans) => {
       if (ans.choice === "1") {
         setChoice1(choice1 + 1);
       } else if (ans.choice === "2") {
         setChoice2(choice2 + 1);
       }
+      return console.log(choice1, choice2);
     });
   }
 
@@ -43,8 +39,6 @@ export const QuestionCard = (props) => {
 
   return (
     <form className="question-card">
-      {choice1 ? console.log("choice 1:" + choice1) : null}
-      {choice2 ? console.log("choice 2:" + choice2) : null}
       <button className="likes">Like</button>
       <br />
       <input

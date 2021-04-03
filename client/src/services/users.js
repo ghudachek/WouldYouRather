@@ -18,3 +18,10 @@ export const getUserQuestions = async (id) => {
   const resp = await api.get(`/users/${id}/questions`);
   return resp.data;
 };
+
+export const updateUser = async (id, userData) => {
+  const resp = await api.put(`/users/${id}`, {
+    user: userData,
+  });
+  return resp.data;
+};
