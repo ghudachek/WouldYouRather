@@ -1,0 +1,36 @@
+.carousel-inner {
+  height: 70vh;
+}
+.block1,
+.block2 {
+  margin-top: 10vh;
+  height: 30vh;
+  width: 30vh;
+  color: rgb(233, 230, 230);
+  background-color: #b22d84;
+  border: none;
+  box-shadow: 0px 0px 20px rgba(37, 34, 37, 0.548);
+}
+.block1 {
+  margin-right: 10vh;
+}
+.info-wyr {
+  margin: 5vh;
+  color: rgb(189, 187, 187);
+}
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+span.carousel-control-next-icon,
+span.carousel-control-prev-icon {
+  width: 40px;
+  height: 30px;
+}
+.join {
+  border-radius: 20px;
+}
