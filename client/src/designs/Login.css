@@ -15,7 +15,9 @@
   height: 45px;
   width: 10vw;
   border-radius: 20px;
-  font-family: "Merienda";
+  font-family: "Gurajada";
+  padding: 20px;
+  font-size: 35px;
 }
 
 .login-label {

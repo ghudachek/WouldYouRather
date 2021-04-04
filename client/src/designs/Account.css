@@ -5,6 +5,7 @@
     "ac ac . ."
     "wyr wyr wyr wyr"
     "ft ft ft ft";
+  font-family: "BenchNine";
 }
 .acct-info {
   grid-area: ac;
@@ -23,20 +24,29 @@
 .acct-info h2 {
   font-size: 50px;
   text-align: left;
-  text-decoration: underline pink;
+  margin-left: 25px;
+  text-decoration: underline 1px pink;
+  text-underline-offset: 12px;
+  font-family: "BenchNine";
 }
 .welcome {
   grid-area: hd;
+  font-size: 80px;
+  text-decoration: underline 1px pink;
+  text-underline-offset: 12px;
+  font-family: "BenchNine";
 }
 .user-wyr {
   grid-area: wyr;
   display: flex;
   flex-direction: row;
   justify-content: left;
+  border: 2px solid black;
 }
 .user-wyr h2 {
   font-size: 50px;
   text-decoration: underline pink;
+  margin-left: 20px;
 }
 .one-wyr {
   border: 2px solid white;
@@ -57,4 +67,27 @@
   background-position: center;
   background-size: cover;
   margin-bottom: 2vh;
+}
+
+.comments {
+  font-size: 35px;
+  margin-top: 100px;
+  border: 2px solid #b22d84;
+  box-shadow: 0px 0px 20px #b22d84;
+  border-radius: 25px;
+}
+.delete-wyr {
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.edit-user {
+  margin-left: 20px;
+}
+.edit-user:hover {
+  color: #b22d84;
+}
+.delete-wyr:hover {
+  color: #b22d84;
+  box-shadow: 0px 0px 10px #b22d84;
 }

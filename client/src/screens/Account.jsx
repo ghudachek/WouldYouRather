@@ -45,7 +45,9 @@ const Account = (props) => {
           ></div>
           <p>Email: {props.user?.email}</p>
           <p>Username: {props.user?.username}</p>
-          <Link to="/user/edit">Edit Profile</Link>
+          <Link className="edit-user" to="/user/edit">
+            Edit Profile
+          </Link>
         </div>
         <div className="comments">
           Your Comments:
@@ -63,7 +65,10 @@ const Account = (props) => {
               <div className="user-block-1">Choice 1: {question.choice1}</div>
               or
               <div className="user-block-2">Choice 2: {question.choice2}</div>
-              <button onClick={() => props.handleDelete(question.id)}>
+              <button
+                className="delete-wyr"
+                onClick={() => props.handleDelete(question.id)}
+              >
                 Delete
               </button>
             </div>

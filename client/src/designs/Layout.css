@@ -6,29 +6,35 @@
 .layout header {
   display: flex;
   align-items: center;
+  font-family: "Gurajada";
 }
 
 .logo-title {
   color: white;
-  margin-right: 5vw;
-  margin-left: 5px;
-  font-size: 60px;
+  margin-right: 18vw;
+  margin-left: 30px;
+  font-size: 80px;
   text-decoration: none;
+  font-family: "Gurajada";
 }
+.logo-title:hover {
+  transition: color 0.5s;
+  color: #b22d84;
+}
+
 a.title-link:visited {
   color: white;
 }
 
 .logout {
   justify-content: right;
-
   margin-right: 15px;
 }
 .links {
   display: flex;
   flex-wrap: nowrap;
   margin-left: 40vw;
-  font-size: 25px;
+  font-size: 40px;
   text-align: right;
 }
 .links a,
@@ -45,4 +51,16 @@ a.title-link:visited {
 }
 .login:hover {
   color: white;
+}
+.links a:hover {
+  color: pink;
+}
+.logout {
+  border-radius: 20px;
+  font-size: 35px;
+  height: 60px;
+  margin-top: 10px;
+}
+.logout:hover {
+  background-color: pink;
 }
