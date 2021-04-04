@@ -44,11 +44,12 @@ export default function MainContainer(props) {
     const newComment = await postComment(id, commentData);
     setComments((prevState) => [...prevState, newComment]);
   };
-  const handleDeleteComment = async (id) => {
-    await destroyComment(id);
+  const handleDeleteComment = async (id1, id2) => {
+    await destroyComment(id1, id2);
     setComments((prevState) =>
-      prevState.filter((comment) => comment.id !== id)
+      prevState.filter((comment) => comment.id !== id2)
     );
+    history.push("/account");
   };
   const handleDelete = async (id) => {
     await destroyQuestion(id);

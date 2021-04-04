@@ -1,15 +1,10 @@
 .account {
-  display: grid;
-  grid-template-areas:
-    "hd hd hd hd"
-    "ac ac . ."
-    "wyr wyr wyr wyr"
-    "ft ft ft ft";
+  display: flex;
+  flex-direction: column;
   font-family: "BenchNine";
   background-color: #31121f;
 }
 .acct-info {
-  grid-area: ac;
   justify-content: right;
   margin-top: 5vh;
   margin-bottom: 10vh;
@@ -23,6 +18,8 @@
   padding-left: 5vw;
 }
 .acct-info h2 {
+  display: flex;
+  flex-direction: column;
   font-size: 50px;
   text-align: left;
   margin-left: 25px;
@@ -31,14 +28,12 @@
   font-family: "BenchNine";
 }
 .welcome {
-  grid-area: hd;
-  font-size: 80px;
+  font-size: 70px;
   text-decoration: underline 1px pink;
   text-underline-offset: 12px;
   font-family: "BenchNine";
 }
 .user-wyr {
-  grid-area: wyr;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -52,7 +47,9 @@
   border: 2px solid white;
   margin: 40px;
   height: 20vh;
-  width: 20vh;
+  width: fit-content;
+  min-width: 20vh;
+  padding: 20px;
   font-size: 30px;
 }
 .one-wyr h4 {
@@ -68,18 +65,41 @@
   background-size: cover;
   margin-bottom: 2vh;
 }
-
+.one-comment {
+  display: flex;
+}
+.comment {
+  background-color: #b22d84;
+  border-radius: 20px;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .comments {
+  display: flex;
+  padding-left: 10px;
+  flex-direction: column;
   font-size: 35px;
-  margin-top: 100px;
+  margin-top: 50px;
   border: 2px solid #b22d84;
   box-shadow: 0px 0px 20px #b22d84;
   border-radius: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: fit-content;
+  min-width: 20vh;
+  margin-bottom: 40px;
 }
 .delete-wyr {
+  border: none;
+  background-color: transparent;
   border-radius: 25px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.material-icons {
+  color: white;
+  font-size: 24px;
 }
 .edit-user {
   margin-left: 20px;
@@ -87,8 +107,10 @@
 .edit-user:hover {
   color: #b22d84;
 }
-.delete-wyr:hover {
+.material-icons:hover {
   color: #b22d84;
+}
+.delete-wyr:hover {
   box-shadow: 0px 0px 10px #b22d84;
 }
 
@@ -158,12 +180,7 @@
     background-size: cover;
     margin-bottom: 2vh;
   }
-  .em {
-    grid-area: em;
-  }
-  .us {
-    grid-area: us;
-  }
+
   .comments {
     font-size: 25px;
     margin-top: 10px;
@@ -178,7 +195,6 @@
     padding-right: 10px;
   }
   .edit-user {
-    grid-area: ed;
     font-size: 20px;
     margin-left: 20px;
   }

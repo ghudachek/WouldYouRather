@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "material-design-icons";
 
 import "../designs/Account.css";
 const Account = (props) => {
@@ -38,13 +39,13 @@ const Account = (props) => {
       <div className="account">
         <h1 className="welcome">Welcome {props.user?.username}!</h1>
         <div className="acct-info">
-          <h2 className="yi">Your Information:</h2>
+          <h2>Your Information:</h2>
           <div
             className="round"
             style={{ backgroundImage: `url(${props.user?.image})` }}
           ></div>
-          <p className="em">Email: {props.user?.email}</p>
-          <p className="us">Username: {props.user?.username}</p>
+          <p>Email: {props.user?.email}</p>
+          <p>Username: {props.user?.username}</p>
           <Link className="edit-user" to="/user/edit">
             Edit Profile
           </Link>
@@ -53,7 +54,15 @@ const Account = (props) => {
           Your Comments:
           {userComments?.map((comment) => (
             <div className="one-comment">
-              <p>{comment.post}</p>
+              <p className="comment">{comment.post}</p>
+              <button
+                className="delete-wyr"
+                onClick={() =>
+                  props.handleDeleteComment(comment.question_id, comment.id)
+                }
+              >
+                <span className="material-icons md-24">delete</span>
+              </button>
             </div>
           ))}
         </div>
@@ -69,7 +78,7 @@ const Account = (props) => {
                 className="delete-wyr"
                 onClick={() => props.handleDelete(question.id)}
               >
-                Delete
+                <span className="material-icons ">delete</span>
               </button>
             </div>
           ))}
