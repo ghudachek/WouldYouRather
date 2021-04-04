@@ -1,6 +1,7 @@
 .layout {
   background-color: #31121f;
   height: 100vh;
+  width: 100%;
   color: white;
 }
 .layout header {
@@ -8,7 +9,11 @@
   align-items: center;
   font-family: "Gurajada";
 }
-
+header .header-layout {
+  display: flex;
+  width: 100vw;
+  border: 2px solid black;
+}
 .logo-title {
   color: white;
   margin-right: 18vw;
@@ -56,11 +61,48 @@ a.title-link:visited {
   color: pink;
 }
 .logout {
-  border-radius: 20px;
-  font-size: 35px;
-  height: 60px;
+  border: none;
+  color: white;
+  background-color: #31121f;
   margin-top: 10px;
 }
 .logout:hover {
   background-color: pink;
+}
+
+@media only screen and (max-width: 400px) {
+  .layout {
+    width: 100vw;
+    height: 100vh;
+    background-color: #31121f;
+  }
+  .header-layout {
+    flex-direction: column;
+  }
+  .children {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    margin-left: 2vw;
+    font-size: 20px;
+  }
+  .logo-title {
+    color: white;
+    margin-right: 0vw;
+    margin-left: 5px;
+    font-size: 40px;
+  }
+  .logout {
+    border: none;
+    color: white;
+    background-color: #31121f;
+    font-size: 20px;
+    height: 32px;
+    margin-top: 9px;
+  }
+  .login {
+    margin-left: 0vw;
+    font-size: 25px;
+  }
 }
