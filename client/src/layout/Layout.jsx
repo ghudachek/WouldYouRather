@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../designs/Layout.css";
 import logo from "../assets/logoWYR.png";
 const Layout = (props) => {
@@ -26,8 +25,9 @@ const Layout = (props) => {
 
   const nonUserOptions = (
     <>
+      <img className="logo" src={logo} alt="logo" />
       <Link className="title-link" to="/">
-        <h1 className="logo-title">Would You Rather</h1>
+        <h1 className="logo-title">Would You Rather?</h1>
       </Link>
       <Link to="/login" className="login">
         Login/Join

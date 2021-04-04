@@ -2,7 +2,10 @@
   background-color: #31121f;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+}
+.home-outter {
+  display: flex;
+  flex-direction: column;
 }
 .likes {
   display: none;
@@ -21,7 +24,7 @@
   height: 100vh;
   width: 100vw;
   margin: 15px;
-  padding-top: 20vh;
+  padding-top: 15vh;
   font-family: "BenchNine";
 }
 .question-card h3 {
@@ -62,22 +65,45 @@
   padding: 15px;
   margin: 25px;
 }
-.question-card h3 {
-  font-size: 50px;
+.question-description h3 {
+  font-size: 60px;
   font-family: "BenchNine";
 }
 .question-description {
-  position: absolute;
-  bottom: 20vh;
-  right: 33vw;
-  font-size: 30px;
+  z-index: 2;
+  font-size: 70px;
   font-family: "BenchNine";
+  margin-top: -40vh;
 }
 .debate:hover {
   color: #b22d84;
   box-shadow: 0px 0px 10px #b22d84;
 }
+@media only screen and (max-width: 2300px) {
+  .choice1 {
+    left: 14vw;
+    background-color: violet;
+  }
+}
+@media only screen and (max-width: 1900px) {
+  .choice1,
+  .choice2 {
+    width: 45vh;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  .choice1 {
+    left: 8vw;
+    background-color: violet;
+  }
+}
 
+@media only screen and (max-width: 1500px) {
+  .choice1,
+  .choice2 {
+    width: 35vh;
+  }
+}
 @media only screen and (max-width: 400px) {
   .question-card h3 {
     font-size: 30px;

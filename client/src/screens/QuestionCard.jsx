@@ -23,39 +23,41 @@ export const QuestionCard = (props) => {
   }, [question]);
 
   return (
-    <form className="question-card">
-      <button className="likes">Like</button>
-      <br />
-      <input
-        style={answered ? { height: `${percentage1 * 50}vh` } : {}}
-        type="button"
-        value={
-          answered
-            ? question.choice1 + " " + percentage1 * 100 + "%"
-            : question.choice1
-        }
-        className="choice1"
-        onClick={(e) => {
-          e.preventDefault();
-          handleCreateAnswers(question.id, { choice: "1" });
-          setAnswered(true);
-        }}
-      ></input>
-      <input
-        type="button"
-        style={answered ? { height: `${percentage2 * 50}vh` } : {}}
-        value={
-          answered
-            ? question.choice2 + " " + percentage2 * 100 + "%"
-            : question.choice2
-        }
-        className="choice2"
-        onClick={(e) => {
-          e.preventDefault();
-          handleCreateAnswers(question.id, { choice: "2" });
-          setAnswered(true);
-        }}
-      ></input>
+    <div className="home-outter">
+      <form className="question-card">
+        <button className="likes">Like</button>
+        <br />
+        <input
+          style={answered ? { height: `${percentage1 * 50}vh` } : {}}
+          type="button"
+          value={
+            answered
+              ? question.choice1 + " " + percentage1 * 100 + "%"
+              : question.choice1
+          }
+          className="choice1"
+          onClick={(e) => {
+            e.preventDefault();
+            handleCreateAnswers(question.id, { choice: "1" });
+            setAnswered(true);
+          }}
+        ></input>
+        <input
+          type="button"
+          style={answered ? { height: `${percentage2 * 50}vh` } : {}}
+          value={
+            answered
+              ? question.choice2 + " " + percentage2 * 100 + "%"
+              : question.choice2
+          }
+          className="choice2"
+          onClick={(e) => {
+            e.preventDefault();
+            handleCreateAnswers(question.id, { choice: "2" });
+            setAnswered(true);
+          }}
+        ></input>
+      </form>
       <div className="question-description">
         <h3>
           Would You Rather: {question.choice1} or {question.choice2}
@@ -64,6 +66,6 @@ export const QuestionCard = (props) => {
           <button className="debate"> See Debate</button>
         </Link>
       </div>
-    </form>
+    </div>
   );
 };

@@ -15,9 +15,9 @@
 
 .logo-title {
   color: white;
-  margin-right: 18vw;
+  margin-right: 0vw;
   margin-left: 30px;
-  font-size: 65px;
+  font-size: 55px;
   text-decoration: none;
   font-family: "Gurajada";
 }
@@ -51,7 +51,7 @@ a.title-link:visited {
   color: pink;
 }
 .login {
-  margin-left: 70vw;
+  margin-left: 60vw;
   font-size: 30px;
 }
 .login:hover {

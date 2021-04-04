@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import "../designs/Join.css";
+import { Link } from "react-router-dom";
 export default function Join(props) {
   const [formData, setFormData] = useState({
     username: "",
@@ -27,12 +28,13 @@ export default function Join(props) {
 
   return (
     <form
+      className="join"
       onSubmit={(e) => {
         e.preventDefault();
         handleJoin(formData);
       }}
     >
-      <h3>Join</h3>
+      <h3 className="join-title">Join</h3>
       <label>
         Username:
         <input
@@ -58,10 +60,12 @@ export default function Join(props) {
         />
       </label>
       <br />
-      <label>
+      <label className="join-img">
         Choose Your Image:
+        <br />
         {images.map((image) => (
           <input
+            className="images-join"
             type="button"
             name="image"
             value={image}
@@ -79,7 +83,10 @@ export default function Join(props) {
         ))}
       </label>
       <br />
-      <button>Submit</button>
+      <button className="submit-btn-join">Submit</button>
+      <Link className="login-link" to="/login">
+        or Login
+      </Link>
     </form>
   );
 }
