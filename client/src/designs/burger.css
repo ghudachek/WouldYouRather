@@ -1,8 +1,0 @@
-.burger {
-  display: none;
-}
-@media only screen and (max-width: 400px) {
-  .burger {
-    display: flex;
-  }
-}

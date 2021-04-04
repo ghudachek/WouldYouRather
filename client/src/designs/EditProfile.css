@@ -1,0 +1,87 @@
+.img-picker {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid pink;
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+  margin-top: 35px;
+  color: transparent;
+}
+.round-edit {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 100%;
+  border: 5px solid pink;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2vh;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.acct-info {
+  display: contents;
+}
+.edit-btn {
+  width: 20vw;
+  background-color: #e34cd9;
+  border-radius: 25px;
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.74);
+}
+.cancel:hover {
+  transition: color 0.5s;
+  color: #e34cd9;
+}
+
+.img-picker:hover {
+  transition: color 0.5s;
+  box-shadow: 0px 0px 10px white;
+}
+.edit-btn:hover {
+  transition: color 0.5s;
+  box-shadow: 0px 0px 10px white;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+@media only screen and (max-width: 400px) {
+  .img-picker {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    color: transparent;
+    border: 2px solid pink;
+  }
+  .acct-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .edit-btn {
+    width: 40vw;
+    background-color: #e34cd9;
+    margin-top: -25px;
+    margin-left: 30vw;
+    margin-right: 10px;
+    border-radius: 25px;
+    font-size: 30px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.74);
+  }
+  .round-edit {
+    border: 4px solid pink;
+  }
+  .choose {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: "benchnine";
+  }
+  .cancel {
+    text-align: center;
+    font-family: "benchnine";
+    font-size: 30px;
+  }
+}

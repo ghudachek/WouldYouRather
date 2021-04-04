@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../designs/EditProfile.css";
 const EditProfile = (props) => {
   const { user, handleUpdateUser } = props;
   const [formData, setFormData] = useState({
@@ -32,34 +33,32 @@ const EditProfile = (props) => {
         handleUpdateUser(user?.id, formData);
       }}
     >
-      <h2>Your Information:</h2>
+      <h2>Edit Your Information:</h2>
       <div
-        className="round"
+        className="round-edit"
         style={{ backgroundImage: `url(${user?.image})` }}
       ></div>
-      <label>
+      <label className="choose">
         Choose a New Image:
+        <br />
         {images.map((image) => (
           <input
+            className="img-picker"
             type="button"
             name="image"
             value={image}
             onClick={handleChange}
             style={{
               backgroundImage: `url(${image})`,
-              width: "200px",
-              height: "200px",
-              borderRadius: "50%",
-              border: "2px solid pink",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
             }}
           />
         ))}
       </label>
       <br />
-      <button>Submit</button>
-      <Link to="/account">Cancel</Link>
+      <button className="edit-btn">Submit</button>
+      <Link className="cancel" to="/account">
+        Cancel
+      </Link>
     </form>
   );
 };

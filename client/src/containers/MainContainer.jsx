@@ -25,14 +25,6 @@ export default function MainContainer(props) {
   const history = useHistory();
   const { currentUser } = props;
 
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      const questionData = await getAllQuestions();
-      setQuestions(questionData);
-    };
-    fetchQuestions();
-  }, []);
-
   const handleCreateAnswers = async (id, answer) => {
     const newQuestion = await postAnswer(id, answer);
     setQuestions((prevState) =>
@@ -41,14 +33,6 @@ export default function MainContainer(props) {
       })
     );
   };
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      const commentData = await getAllComments();
-      setComments(commentData);
-    };
-    fetchComments();
-  }, []);
 
   const handleCreateQuestions = async (questionData) => {
     const newQuestion = await postQuestion(questionData);
@@ -66,7 +50,6 @@ export default function MainContainer(props) {
       prevState.filter((comment) => comment.id !== id)
     );
   };
-
   const handleDelete = async (id) => {
     await destroyQuestion(id);
     setQuestions((prevState) =>
@@ -74,6 +57,19 @@ export default function MainContainer(props) {
     );
     history.push("/account");
   };
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      const questionData = await getAllQuestions();
+      setQuestions(questionData);
+    };
+    fetchQuestions();
+    const fetchComments = async () => {
+      const commentData = await getAllComments();
+      setComments(commentData);
+    };
+    fetchComments();
+  }, []);
   return (
     <Switch>
       <Route exact path="/">
