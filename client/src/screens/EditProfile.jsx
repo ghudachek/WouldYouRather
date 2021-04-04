@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 const EditProfile = (props) => {
   const { user, handleUpdateUser } = props;
-  const history = useHistory();
   const [formData, setFormData] = useState({
     image: "",
   });

@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { postAnswer, putAnswer } from "../services/answers";
+import { Link } from "react-router-dom";
 
 export const QuestionCard = (props) => {
   const { question, handleCreateAnswers } = props;
@@ -30,7 +29,11 @@ export const QuestionCard = (props) => {
       <input
         style={answered ? { height: `${percentage1 * 50}vh` } : {}}
         type="button"
-        value={question.choice1}
+        value={
+          answered
+            ? question.choice1 + " " + percentage1 * 100 + "%"
+            : question.choice1
+        }
         className="choice1"
         onClick={(e) => {
           e.preventDefault();
@@ -41,7 +44,11 @@ export const QuestionCard = (props) => {
       <input
         type="button"
         style={answered ? { height: `${percentage2 * 50}vh` } : {}}
-        value={question.choice2}
+        value={
+          answered
+            ? question.choice2 + " " + percentage2 * 100 + "%"
+            : question.choice2
+        }
         className="choice2"
         onClick={(e) => {
           e.preventDefault();
@@ -49,10 +56,14 @@ export const QuestionCard = (props) => {
           setAnswered(true);
         }}
       ></input>
-      <h3>
-        Would You Rather: {question.choice1} or {question.choice2}
-      </h3>
-      <Link to={`/questions/${question.id}/detail`}>See Debate</Link>
+      <div className="question-description">
+        <h3>
+          Would You Rather: {question.choice1} or {question.choice2}
+        </h3>
+        <Link to={`/questions/${question.id}/detail`}>
+          <button className="debate"> See Debate</button>
+        </Link>
+      </div>
     </form>
   );
 };

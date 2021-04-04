@@ -4,6 +4,7 @@ import { getAllUsers } from "../services/users";
 import { useState, useEffect } from "react";
 import { getOneQuestion } from "../services/questions";
 import { Link, useParams } from "react-router-dom";
+
 const QuestionDetail = (props) => {
   const [question, setQuestion] = useState("");
   const [users, setUsers] = useState();
