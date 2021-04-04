@@ -39,3 +39,10 @@ a.title-link:visited {
 .links p {
   color: pink;
 }
+.login {
+  margin-left: 70vw;
+  font-size: 30px;
+}
+.login:hover {
+  color: white;
+}

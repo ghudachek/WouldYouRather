@@ -28,7 +28,9 @@ export default function Layout(props) {
             <Link className="title-link" to="/">
               <h1 className="logo-title">Would You Rather</h1>
             </Link>
-            <Link to="/login">Login/Join</Link>
+            <Link to="/login" className="login">
+              Login/Join
+            </Link>
           </>
         )}
       </header>

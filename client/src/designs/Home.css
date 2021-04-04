@@ -18,7 +18,6 @@
 
 .question-card {
   position: relative;
-  border: 2px solid black;
   height: 100vh;
   width: 100vw;
   margin: 15px;
@@ -26,7 +25,7 @@
 }
 .question-card h3 {
   padding-top: 20px;
-  font-size: 35px;
+  font-size: 33px;
 }
 
 .choice1,
@@ -37,7 +36,7 @@
   border: none;
   box-shadow: 0px 0px 15px rgb(5, 5, 5);
   bottom: 0;
-  font-size: 60px;
+  font-size: 50px;
   transition: height 0.5s;
   bottom: 40vh;
   position: absolute;
@@ -54,17 +53,17 @@
   box-shadow: 0px 0px 10px white;
 }
 .debate {
-  font-size: 35px;
+  font-size: 30px;
   border-radius: 45px;
   padding: 15px;
-  margin: 15px;
+  margin: 25px;
 }
 .question-card h3 {
-  font-size: 80px;
-  margin: 25px;
+  font-size: 50px;
 }
 .question-description {
   position: absolute;
-  bottom: 30vh;
-  right: 30vw;
+  bottom: 20vh;
+  right: 25vw;
+  font-size: 30px;
 }
