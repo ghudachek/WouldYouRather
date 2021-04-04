@@ -35,3 +35,30 @@
   color: #b22d84;
   box-shadow: 0px 0px 10px #b22d84;
 }
+
+@media only screen and (max-width: 400px) {
+  .label-q {
+    font-size: 30px;
+  }
+  .creat-q-input {
+    border-radius: 20px;
+    padding: 5px;
+  }
+  .create-btn {
+    width: 30vw;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  .or {
+    margin-left: 0px;
+    font-size: 50px;
+  }
+  .wyr-cq {
+    margin-left: 0px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+}

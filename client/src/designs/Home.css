@@ -77,3 +77,50 @@
   color: #b22d84;
   box-shadow: 0px 0px 10px #b22d84;
 }
+
+@media only screen and (max-width: 400px) {
+  .question-card h3 {
+    font-size: 30px;
+  }
+  .question-description {
+    position: absolute;
+    bottom: 20vh;
+    right: 0vw;
+    font-size: 20px;
+  }
+  .debate {
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .question-card {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    margin: 15px;
+    padding-top: 10vh;
+  }
+  .question-card h3 {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+
+  .choice1,
+  .choice2 {
+    margin: 10px;
+    height: 20vh;
+    width: 20vh;
+    border: none;
+    box-shadow: 0px 0px 15px rgb(5, 5, 5);
+    bottom: 0;
+    font-size: 20px;
+    transition: height 0.5s;
+    bottom: 45vh;
+    position: absolute;
+  }
+  .choice1 {
+    left: 0vw;
+  }
+}

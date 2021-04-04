@@ -38,13 +38,13 @@ const Account = (props) => {
       <div className="account">
         <h1 className="welcome">Welcome {props.user?.username}!</h1>
         <div className="acct-info">
-          <h2>Your Information:</h2>
+          <h2 className="yi">Your Information:</h2>
           <div
             className="round"
             style={{ backgroundImage: `url(${props.user?.image})` }}
           ></div>
-          <p>Email: {props.user?.email}</p>
-          <p>Username: {props.user?.username}</p>
+          <p className="em">Email: {props.user?.email}</p>
+          <p className="us">Username: {props.user?.username}</p>
           <Link className="edit-user" to="/user/edit">
             Edit Profile
           </Link>

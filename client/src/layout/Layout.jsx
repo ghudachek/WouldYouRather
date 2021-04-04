@@ -12,7 +12,7 @@ const Layout = (props) => {
         <h1 className="logo-title">Would You Rather?</h1>
       </Link>
       <div className="links">
-        <p>Hello {currentUser?.username}</p>
+        <p className="hello">Hello {currentUser?.username}</p>
         <Link to="/account">Account</Link>
         <br />
         <Link to="/create">Write Your Own</Link>
