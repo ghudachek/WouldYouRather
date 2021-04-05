@@ -20,7 +20,7 @@
   margin-left: 20px;
   margin-top: 20px;
 }
-.acct-info {
+.acct-info-edit {
   display: contents;
 }
 .edit-btn {
@@ -56,7 +56,7 @@
     color: transparent;
     border: 2px solid pink;
   }
-  .acct-info {
+  .acct-info-edit {
     display: flex;
     flex-direction: column;
   }

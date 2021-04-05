@@ -93,17 +93,20 @@
 }
 @media only screen and (max-width: 1700px) {
   .choice1 {
-    left: 8vw;
+    left: 20vw;
     background-color: violet;
   }
 }
 
+/* laptop view */
 @media only screen and (max-width: 1500px) {
   .choice1,
   .choice2 {
-    width: 35vh;
+    width: 45vh;
   }
 }
+
+/* iphone X */
 @media only screen and (max-width: 400px) {
   .question-card h3 {
     font-size: 30px;

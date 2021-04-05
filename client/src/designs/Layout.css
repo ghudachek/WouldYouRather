@@ -70,6 +70,7 @@ a.title-link:visited {
   background-color: pink;
 }
 .children {
+  padding-bottom: 200px;
   background-color: #31121f;
 }
 @media only screen and (max-width: 400px) {
@@ -77,6 +78,9 @@ a.title-link:visited {
     width: 100vw;
     height: 100vh;
     background-color: #31121f;
+  }
+  .logo {
+    width: 60vw;
   }
   .header-layout {
     flex-direction: column;

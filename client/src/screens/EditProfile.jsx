@@ -27,7 +27,7 @@ const EditProfile = (props) => {
   };
   return (
     <form
-      className="acct-info"
+      className="acct-info-edit"
       onSubmit={(e) => {
         e.preventDefault();
         handleUpdateUser(user?.id, formData);

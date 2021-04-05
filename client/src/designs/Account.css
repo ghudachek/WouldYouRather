@@ -17,16 +17,7 @@
 .acct-info p {
   padding-left: 5vw;
 }
-.acct-info h2 {
-  display: flex;
-  flex-direction: column;
-  font-size: 50px;
-  text-align: left;
-  margin-left: 25px;
-  text-decoration: underline 1px pink;
-  text-underline-offset: 12px;
-  font-family: "BenchNine";
-}
+
 .welcome {
   font-size: 70px;
   text-decoration: underline 1px pink;
@@ -38,22 +29,24 @@
   flex-direction: row;
   justify-content: left;
 }
-.user-wyr h2 {
+.account-titles {
   font-size: 50px;
   text-decoration: underline pink;
   margin-left: 20px;
 }
 .one-wyr {
-  border: 2px solid white;
+  border: 2px solid #b22d84;
+  box-shadow: 0px 0px 20px #b22d84;
   margin: 40px;
   height: 20vh;
   width: fit-content;
+  height: fit-content;
   min-width: 20vh;
-  padding: 20px;
   font-size: 30px;
 }
-.one-wyr h4 {
+.span {
   font-size: 40px;
+  padding-left: 20px;
 }
 
 .round {
@@ -72,6 +65,7 @@
   background-color: #b22d84;
   border-radius: 20px;
   width: fit-content;
+  height: fit-content;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -83,37 +77,67 @@
   margin-top: 50px;
   border: 2px solid #b22d84;
   box-shadow: 0px 0px 20px #b22d84;
-  border-radius: 25px;
   margin-left: 20px;
   margin-right: 20px;
-  width: fit-content;
-  min-width: 20vh;
+  height: fit-content;
+  min-width: 95vw;
   margin-bottom: 40px;
 }
 .delete-wyr {
   border: none;
   background-color: transparent;
-  border-radius: 25px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 10px;
 }
-.material-icons {
+.material-icons.md-36 {
   color: white;
   font-size: 24px;
 }
 .edit-user {
   margin-left: 20px;
 }
-.edit-user:hover {
-  color: #b22d84;
-}
+.edit-user:hover,
 .material-icons:hover {
   color: #b22d84;
 }
-.delete-wyr:hover {
-  box-shadow: 0px 0px 10px #b22d84;
+.material-icons.md-36 {
+  font-size: 36px;
 }
-
+@media only screen and (max-width: 1500px) {
+  .acct-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    font-size: 35px;
+    text-align: left;
+    width: 100vw;
+  }
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .round {
+    height: 25vh;
+    width: 25vh;
+    margin-bottom: 0vh;
+    margin-left: 2vw;
+  }
+  .edit-user,
+  .acct-info p {
+    padding-left: 0;
+    margin-left: 30px;
+    font-size: 30px;
+    max-width: fit-content;
+  }
+  .comments {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: fit-content;
+    min-width: 50vw;
+    margin-bottom: 40px;
+  }
+}
 @media only screen and (max-width: 400px) {
   .account {
     display: flex;
@@ -122,33 +146,26 @@
     margin: 10px;
   }
   .acct-info {
-    margin-top: 2vh;
-    margin-bottom: 0vh;
     font-size: 30px;
-    text-align: left;
-    width: 100vw;
   }
   .acct-info p {
-    padding-left: 5vw;
+    padding-left: 3vw;
     font-size: 20px;
   }
-  .acct-info h2 {
-    font-size: 30px;
-    text-align: left;
-    margin-left: 5vw;
-    text-underline-offset: 5px;
-  }
   .welcome {
-    font-size: 30px;
+    font-size: 35px;
     margin-left: -25vh;
-    text-underline-offset: 12px;
+    text-underline-offset: 2px;
+  }
+  .material-icons.md-36 {
+    font-size: 24px;
   }
   .user-wyr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .user-wyr h2 {
+  .account-titles {
     font-size: 30px;
     text-decoration: underline pink;
     margin-left: 0vw;
@@ -157,27 +174,24 @@
   .one-wyr {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
     margin: 20px;
-    height: 25vh;
-    width: 30vh;
-    padding: 20px;
+    min-height: 25vh;
+    min-width: 30vh;
+    padding: 5px;
     margin-left: 15vw;
-    font-size: 18px;
+    font-size: 22px;
   }
-  .one-wyr h4 {
-    font-size: 20px;
+  .span {
+    width: fit-content;
+    font-size: 25px;
+    text-align: left;
+    padding-right: 15px;
   }
-
   .round {
     height: 18vh;
     width: 18vh;
     margin-left: 8vw;
     margin-top: -60px;
-    border-radius: 100%;
-    border: 2px solid pink;
-    background-position: center;
-    background-size: cover;
     margin-bottom: 2vh;
   }
 
@@ -186,13 +200,18 @@
     margin-top: 10px;
     margin-left: 0vh;
     margin-bottom: 15px;
-    height: 25vh;
-    width: 44vh;
+    min-height: 20vh;
+    min-width: 44vh;
+    padding: 5px;
   }
-  .delete-wyr {
-    border-radius: 25px;
+  .comment {
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 10px;
+  }
+  .delete-wyr {
+    width: fit-content;
+    padding: 0;
   }
   .edit-user {
     font-size: 20px;

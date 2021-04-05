@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import { verifyUser, loginUser, joinUser, removeToken } from "./services/auth";
 import Join from "./screens/Join";
 import Login from "./screens/Login";
+import "material-design-icons";
 import { updateUser } from "./services/users";
 
 function App() {
