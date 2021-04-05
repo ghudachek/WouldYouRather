@@ -34,6 +34,18 @@ span.carousel-control-prev-icon {
 .join {
   border-radius: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .block1,
+  .block2 {
+    margin-top: 10vh;
+    height: 20vh;
+    width: 20vh;
+    font-size: 20px;
+  }
+  .carousel-inner {
+    height: 50vh;
+  }
+}
 
 @media only screen and (max-width: 400px) {
   .d-block {

@@ -38,6 +38,7 @@ export default function Join(props) {
       <label>
         Username:
         <input
+          className="input"
           type="text"
           name="username"
           value={username}
@@ -47,12 +48,19 @@ export default function Join(props) {
       <br />
       <label>
         Email:
-        <input type="text" name="email" value={email} onChange={handleChange} />
+        <input
+          className="input"
+          type="text"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
       </label>
       <br />
       <label>
         Password:
         <input
+          className="input"
           type="password"
           name="password"
           value={password}
@@ -72,12 +80,6 @@ export default function Join(props) {
             onClick={handleChange}
             style={{
               backgroundImage: `url(${image})`,
-              width: "200px",
-              height: "200px",
-              borderRadius: "50%",
-              border: "2px solid pink",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
             }}
           />
         ))}

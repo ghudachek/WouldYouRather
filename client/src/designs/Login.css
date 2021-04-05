@@ -4,11 +4,11 @@
   margin-left: 30vw;
   justify-content: start;
   margin-top: 15vh;
-  background-color: #ffffff9f;
+  background-color: #fff1fdb2;
   border-radius: 35px;
   width: 80vh;
   height: 40vh;
-  box-shadow: 0px 0px 12px rgba(226, 224, 224, 0.678);
+  box-shadow: 0px 0px 20px #bbb1b8b2;
 }
 
 .login-input {
@@ -28,7 +28,8 @@
 .submit-btn {
   border: none;
   background-color: #b22d84;
-  width: 8vw;
+  min-width: 8vw;
+  width: fit-content;
   font-size: 30px;
   border-radius: 20px;
   margin-left: 17vw;
@@ -54,6 +55,38 @@
   color: #b22d84;
 }
 
+@media only screen and (max-width: 800px) {
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+    justify-content: start;
+    margin-top: 8vh;
+    width: fit-content;
+    min-width: 70vw;
+    height: fit-content;
+  }
+  .or-join {
+    align-self: center;
+  }
+  .submit-btn {
+    font-size: 40px;
+    border-radius: 30px;
+    margin: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-self: center;
+  }
+  .login-input {
+    height: 45px;
+    min-width: 30vw;
+    width: fit-content;
+  }
+  .or-join {
+    margin-top: -20px;
+    font-size: 45px;
+  }
+}
 @media only screen and (max-width: 400px) {
   .login-form {
     display: flex;
@@ -61,30 +94,29 @@
     margin-left: 7vw;
     justify-content: start;
     margin-top: 10vh;
-    background-color: #ffffff9f;
     border-radius: 35px;
     width: 40vh;
     height: 50vh;
-    box-shadow: 0px 0px 12px rgba(226, 224, 224, 0.678);
   }
 
   .login-input {
     height: 20px;
-    width: 35vw;
+    min-width: 35vw;
     border-radius: 20px;
     padding: 15px;
     font-size: 20px;
   }
 
   .login-label {
-    font-size: 25px;
+    font-size: 35px;
     padding-right: 15px;
   }
   .submit-btn {
-    width: 18vw;
-    font-size: 20px;
+    min-width: 18vw;
+    width: fit-content;
+    font-size: 25px;
+    padding: 2px;
     border-radius: 20px;
-    margin-left: 34vw;
   }
   .login-form-title {
     margin-top: 20px;
@@ -92,7 +124,6 @@
     font-size: 60px;
   }
   .or-join {
-    margin-top: -20px;
     font-size: 25px;
   }
 }

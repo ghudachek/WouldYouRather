@@ -35,12 +35,16 @@ a.title-link:visited {
   margin-right: 15px;
   height: fit-content;
 }
+.login,
 .links {
   display: flex;
   flex-wrap: nowrap;
   margin-left: 20vw;
   font-size: 40px;
   text-align: right;
+}
+.login {
+  margin-left: 50vw;
 }
 .links a,
 .links p {
@@ -49,10 +53,6 @@ a.title-link:visited {
 }
 .links p {
   color: pink;
-}
-.login {
-  margin-left: 60vw;
-  font-size: 30px;
 }
 .login:hover {
   color: white;
@@ -73,6 +73,33 @@ a.title-link:visited {
   padding-bottom: 200px;
   background-color: #31121f;
 }
+/* ipad */
+@media only screen and (max-width: 800px) {
+  .layout {
+    width: 100vw;
+    height: 100vh;
+    background-color: #31121f;
+  }
+  .logo-title {
+    font-size: 70px;
+  }
+  .logo {
+    margin-top: -70px;
+    width: 100vw;
+  }
+  .header-layout {
+    flex-direction: column;
+  }
+  .children {
+    display: flex;
+    flex-direction: column;
+  }
+  .login {
+    margin-left: 0vw;
+    font-size: 45px;
+  }
+}
+/* iphone x */
 @media only screen and (max-width: 400px) {
   .layout {
     width: 100vw;
@@ -80,7 +107,8 @@ a.title-link:visited {
     background-color: #31121f;
   }
   .logo {
-    width: 60vw;
+    margin-top: -50px;
+    width: 100vw;
   }
   .header-layout {
     flex-direction: column;
