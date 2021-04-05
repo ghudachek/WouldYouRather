@@ -94,7 +94,8 @@ a.title-link:visited {
     display: flex;
     flex-direction: column;
   }
-  .login {
+  .login,
+  .links {
     margin-left: 0vw;
     font-size: 45px;
   }

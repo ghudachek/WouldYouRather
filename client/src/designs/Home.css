@@ -1,11 +1,8 @@
 .questions-div {
   background-color: #31121f;
   display: flex;
-  flex-wrap: wrap;
-}
-.home-outter {
-  display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .likes {
   display: none;
@@ -19,15 +16,16 @@
   margin: 5px;
 }
 
-.question-card {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  margin: 15px;
-  padding-top: 15vh;
-  font-family: "BenchNine";
+.questions-move {
+  display: grid;
+  grid-template-columns: repeat(4) 1fr;
+  grid-template-rows: 1fr;
+  height: 60vh;
+  width: 90vw;
+  align-self: center;
+  margin-left: 5vw;
 }
-.question-card h3 {
+.questions-move h3 {
   padding-top: 20px;
   font-size: 33px;
   font-family: "BenchNine";
@@ -36,22 +34,24 @@
 .choice1,
 .choice2 {
   margin: 20px;
-  height: 20vh;
-  width: 50vh;
+  min-height: 20vh;
+  min-width: 55vh;
+  width: fit-content;
+  height: fit-content;
   border: none;
   box-shadow: 0px 0px 15px rgb(5, 5, 5);
-  bottom: 0;
-  font-size: 50px;
+  font-size: 40px;
   transition: height 0.5s;
-  bottom: 40vh;
-  position: absolute;
 }
 .choice1 {
-  left: 20vw;
   background-color: violet;
+  grid-column: 2;
+  align-self: end;
 }
 .choice2 {
+  grid-column: 3;
   background-color: #b22d84;
+  align-self: end;
 }
 .choice1:hover,
 .choice2:hover {
@@ -64,6 +64,7 @@
   border-radius: 45px;
   padding: 15px;
   margin: 25px;
+  border: none;
 }
 .question-description h3 {
   font-size: 60px;
@@ -73,29 +74,10 @@
   z-index: 2;
   font-size: 70px;
   font-family: "BenchNine";
-  margin-top: -40vh;
 }
 .debate:hover {
   color: #b22d84;
   box-shadow: 0px 0px 10px #b22d84;
-}
-@media only screen and (max-width: 2300px) {
-  .choice1 {
-    left: 14vw;
-    background-color: violet;
-  }
-}
-@media only screen and (max-width: 1900px) {
-  .choice1,
-  .choice2 {
-    width: 45vh;
-  }
-}
-@media only screen and (max-width: 1700px) {
-  .choice1 {
-    left: 20vw;
-    background-color: violet;
-  }
 }
 
 /* laptop view */
@@ -105,51 +87,83 @@
     width: 45vh;
   }
 }
+@media only screen and (max-width: 800px) {
+  .questions-move {
+    display: grid;
+    grid-template-columns: repeat(4) 1fr;
+    grid-template-rows: 1fr;
+    height: 40vh;
+    width: 80vw;
+    align-self: center;
+    margin-left: 10vw;
+  }
+  .choice1,
+  .choice2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    min-height: 0vh;
+    max-height: 30vh;
+    min-width: 20vh;
+    width: fit-content;
+    height: 15vh;
+    align-self: end;
+  }
+  .choice1 {
+    grid-column: 2;
+    grid-column-end: 3;
+  }
+  .question-description h3 {
+    z-index: 2;
+    font-size: 40px;
+    margin-top: 2vh;
+  }
+  .debate {
+    font-size: 25px;
+    border-radius: 45px;
+    padding: 15px;
+    margin: 10px;
+  }
+}
 
 /* iphone X */
 @media only screen and (max-width: 400px) {
-  .question-card h3 {
-    font-size: 30px;
+  .questions-move {
+    display: grid;
+    grid-template-columns: repeat(4) 1fr;
+    grid-template-rows: 1fr;
+    height: 30vh;
+    width: 80vw;
+    align-self: center;
+    margin-left: 10vw;
   }
-  .question-description {
-    position: absolute;
-    bottom: 20vh;
-    right: 0vw;
+  .choice1,
+  .choice2 {
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+    min-height: 0vh;
+    max-height: 30vh;
+    width: 12vw;
+    min-width: 15vh;
+    height: 15vh;
+    white-space: pre-wrap;
+    display: inline-block;
+    padding: 5px;
+    align-self: end;
+  }
+  .choice1 {
+    grid-column: 2;
+    grid-column-end: 3;
+  }
+  .question-description h3 {
+    z-index: 2;
+    font-size: 30px;
+    margin-top: 2vh;
   }
   .debate {
     font-size: 20px;
-    border-radius: 40px;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  .question-card {
-    position: relative;
-    height: 80vh;
-    width: 100vw;
-    margin: 15px;
-    padding-top: 10vh;
-  }
-  .question-card h3 {
-    padding-top: 20px;
-    font-size: 30px;
-  }
-
-  .choice1,
-  .choice2 {
+    padding: 15px;
     margin: 10px;
-    height: 20vh;
-    width: 20vh;
-    border: none;
-    box-shadow: 0px 0px 15px rgb(5, 5, 5);
-    bottom: 0;
-    font-size: 20px;
-    transition: height 0.5s;
-    bottom: 45vh;
-    position: absolute;
-  }
-  .choice1 {
-    left: 0vw;
   }
 }

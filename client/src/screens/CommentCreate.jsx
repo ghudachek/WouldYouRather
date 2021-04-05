@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "material-design-icons";
 
 const CommentCreate = (props) => {
   const { handleCreate, questionId } = props;
@@ -17,21 +18,25 @@ const CommentCreate = (props) => {
 
   return (
     <form
+      className="comment-create-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(questionId, commentData);
+        commentData.post = "";
       }}
     >
-      <label>
-        Comment:
-        <input
-          type="text"
-          name="post"
-          value={commentData.post}
-          onChange={handleChange}
-        ></input>
-      </label>
-      <button>Send</button>
+      <input
+        className="comment-create"
+        placeholder="Comment"
+        type="text-area"
+        name="post"
+        value={commentData.post}
+        onChange={handleChange}
+      ></input>
+
+      <button className="send">
+        <span className="material-icons md-48">send</span>
+      </button>
     </form>
   );
 };
