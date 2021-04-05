@@ -132,17 +132,6 @@
 }
 
 @media only screen and (max-width: 1030px) {
-  .question-div-detail {
-    display: flex;
-    flex-direction: column;
-  }
-  .question-card-detail {
-    display: grid;
-    grid-template-columns: 100px 30vw 5vw 30vw 100px;
-    grid-template-rows: repeat(2) 1fr;
-    margin-top: 50px;
-    align-self: center;
-  }
   .choice1-detail,
   .choice2-detail {
     margin: 20px;
@@ -152,113 +141,23 @@
     border: none;
     box-shadow: 0px 0px 15px rgb(5, 5, 5);
     transition: height 0.5s;
-    font-size: 25px;
+    font-size: 30px;
   }
   .comment-title-details {
     font-size: 50px;
   }
   .comment-section {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    min-height: fit-content;
     width: 80vw;
-    height: 30vh;
-    padding: 10px;
-    font-family: "Benchnine";
-    font-size: 30px;
-    overflow: scroll;
-    background-color: white;
-    color: black;
-  }
-  .choice1-detail {
-    background-color: violet;
-    grid-column: 2;
-    align-self: end;
   }
 
-  .choice2-detail {
-    grid-column: 4;
-    background-color: #b22d84;
-    align-self: end;
-  }
   .q-detail-descript {
     font-size: 50px;
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row: 2;
-    font-family: "Gurajada";
   }
 
-  .choice1-detail:hover,
-  .choice2-detail:hover {
-    transition: color 0.5s;
-    box-shadow: 0px 0px 10px white;
-    color: rgba(255, 255, 255, 0.747);
-  }
-  .comments-detail {
-    align-self: flex-start;
-    margin: 15px;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 25px;
-    min-width: fit-content;
-    width: 20vw;
-    padding: 2px;
-  }
-  .username-detail {
-    font-weight: bold;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .details-back-link {
-    border: none;
-    color: #b22d84;
-    font-family: "Gurajada";
-    align-self: flex-start;
-  }
   .details-back-link .material-icons.md-48 {
-    font-size: 90px;
-  }
-  .comment-create-form {
-    margin-top: 20px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-  .comment-create {
-    font-size: 25px;
-    border-radius: 25px;
-    border: none;
-    padding-left: 15px;
-  }
-  .send {
-    border: none;
-    background-color: transparent;
-    background: none;
-    margin: 10px;
-  }
-  .material-icons.md-48 {
-    font-family: "Material Icons";
-    color: white;
-    font-size: 48px;
-    align-self: center;
-  }
-  .you-comments-detail {
-    margin: 15px;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 25px;
-    min-width: fit-content;
-    width: 20vw;
-    padding: 2px;
-    align-self: flex-end;
-  }
-  .you-username-detail {
-    font-weight: bold;
-    padding-left: 15px;
-    padding-right: 15px;
-    align-self: right;
+    font-size: 70px;
   }
 }
 
@@ -291,28 +190,13 @@
     background-color: white;
     color: black;
   }
-  .choice1-detail {
-    background-color: violet;
-    grid-column: 2;
-    align-self: end;
-  }
 
-  .choice2-detail {
-    grid-column: 4;
-    background-color: #b22d84;
-    align-self: end;
-  }
   .q-detail-descript {
     font-size: 30px;
   }
-  .details-back-link {
-    border: none;
-    color: #b22d84;
-    font-family: "Gurajada";
-    align-self: flex-start;
-  }
+
   .details-back-link .material-icons.md-48 {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .comment-create {
@@ -323,25 +207,14 @@
     font-size: 32px;
   }
   .comments-detail {
-    margin: 15px;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 25px;
-    min-width: fit-content;
+    margin: 10px;
     width: 20vw;
-    padding: 2px;
+    padding-right: 10px;
   }
   .you-comments-detail {
     margin: 10px;
     display: flex;
     padding-right: 5px;
-    padding-top: 5px;
-  }
-  .username-detail,
-  .you-username-detail {
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 15px;
-    align-self: right;
+    padding-top: 10px;
   }
 }

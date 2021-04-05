@@ -149,7 +149,7 @@
     font-size: 30px;
   }
   .acct-info p {
-    padding-left: 3vw;
+    padding-left: 0vw;
     font-size: 20px;
   }
   .welcome {
@@ -168,7 +168,7 @@
   .account-titles {
     font-size: 30px;
     text-decoration: underline pink;
-    margin-left: 0vw;
+    margin-left: 2vw;
     margin-bottom: -5px;
   }
   .one-wyr {
@@ -191,17 +191,18 @@
     height: 18vh;
     width: 18vh;
     margin-left: 8vw;
-    margin-top: -60px;
+    margin-top: -80px;
     margin-bottom: 2vh;
+    margin-left: 55vw;
   }
 
   .comments {
     font-size: 25px;
     margin-top: 10px;
-    margin-left: 0vh;
+    margin-left: 4vh;
     margin-bottom: 15px;
     min-height: 20vh;
-    min-width: 44vh;
+    min-width: 40vh;
     padding: 5px;
   }
   .comment {

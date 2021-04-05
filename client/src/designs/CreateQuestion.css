@@ -85,6 +85,11 @@
     font-family: "Gurajada";
   }
 }
+@media only screen and (max-width: 800px) {
+  .create-q {
+    margin-left: 15vw;
+  }
+}
 @media only screen and (max-width: 400px) {
   .create-q {
     min-width: 90vw;
