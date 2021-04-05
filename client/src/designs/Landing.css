@@ -34,3 +34,40 @@ span.carousel-control-prev-icon {
 .join {
   border-radius: 20px;
 }
+
+@media only screen and (max-width: 400px) {
+  .d-block {
+    width: 100vw;
+  }
+  .carousel-item {
+    margin-top: 10vh;
+  }
+  .carousel-inner {
+    height: 55vh;
+  }
+  .block1,
+  .block2 {
+    margin-top: 10vh;
+    height: 15vh;
+    width: 15vh;
+    font-size: 18px;
+  }
+  .block1 {
+    margin-right: 2vh;
+  }
+
+  .landing-h3 {
+    font-size: 20px;
+  }
+  .join {
+    font-size: 15px;
+  }
+  .info-wyr {
+    margin: 15px;
+  }
+  span.carousel-control-next-icon,
+  span.carousel-control-prev-icon {
+    width: 25px;
+    height: 15px;
+  }
+}

@@ -1,34 +1,45 @@
 .layout {
   background-color: #31121f;
   height: 100vh;
+  width: 100%;
   color: white;
+}
+.logo {
+  width: 15vw;
 }
 .layout header {
   display: flex;
   align-items: center;
+  font-family: "Gurajada";
 }
 
 .logo-title {
   color: white;
-  margin-right: 5vw;
-  margin-left: 5px;
-  font-size: 60px;
+  margin-right: 0vw;
+  margin-left: 30px;
+  font-size: 55px;
   text-decoration: none;
+  font-family: "Gurajada";
 }
+.logo-title:hover {
+  transition: color 0.5s;
+  color: #b22d84;
+}
+
 a.title-link:visited {
   color: white;
 }
 
 .logout {
   justify-content: right;
-
   margin-right: 15px;
+  height: fit-content;
 }
 .links {
   display: flex;
   flex-wrap: nowrap;
-  margin-left: 40vw;
-  font-size: 25px;
+  margin-left: 20vw;
+  font-size: 40px;
   text-align: right;
 }
 .links a,
@@ -38,4 +49,75 @@ a.title-link:visited {
 }
 .links p {
   color: pink;
+}
+.login {
+  margin-left: 60vw;
+  font-size: 30px;
+}
+.login:hover {
+  color: white;
+}
+.links a:hover {
+  color: pink;
+}
+.logout {
+  border: none;
+  color: white;
+  background-color: #31121f;
+  margin-top: 10px;
+}
+.logout:hover {
+  background-color: pink;
+}
+.children {
+  padding-bottom: 200px;
+  background-color: #31121f;
+}
+@media only screen and (max-width: 400px) {
+  .layout {
+    width: 100vw;
+    height: 100vh;
+    background-color: #31121f;
+  }
+  .logo {
+    width: 60vw;
+  }
+  .header-layout {
+    flex-direction: column;
+  }
+  .children {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    font-size: 25px;
+    margin: 5px;
+  }
+  .links a,
+  .links p {
+    margin: 5px;
+    text-align: left;
+  }
+  .hello {
+    text-align: left;
+    margin-left: 0px;
+  }
+  .logo-title {
+    color: white;
+    margin-right: 0vw;
+    margin-left: 5px;
+    font-size: 60px;
+  }
+  .logout {
+    border: none;
+    color: white;
+    background-color: #31121f;
+    font-size: 25px;
+    height: 32px;
+    margin-top: 4px;
+  }
+  .login {
+    margin-left: 0vw;
+    font-size: 25px;
+  }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "../designs/CreateQuestion.css";
 
 const CreateQuestion = (props) => {
   const [formData, setFormData] = useState({
@@ -19,15 +20,17 @@ const CreateQuestion = (props) => {
 
   return (
     <form
+      className="create-q"
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(formData);
       }}
     >
-      <h3>Would You Rather...</h3>
-      <label>
+      <h3 className="wyr-cq">Would You Rather...</h3>
+      <label className="label-q">
         Choice One:
         <input
+          className="creat-q-input"
           type="text"
           name="choice1"
           value={choice1}
@@ -35,10 +38,11 @@ const CreateQuestion = (props) => {
           onChange={handleChange}
         />
       </label>
-      <h4>or</h4>
-      <label>
+      <h4 className="or">or</h4>
+      <label className="label-q">
         Choice Two:
         <input
+          className="creat-q-input"
           type="text"
           name="choice2"
           value={choice2}
@@ -47,7 +51,7 @@ const CreateQuestion = (props) => {
         />
       </label>
       <br />
-      <button>Create</button>
+      <button className="create-btn">Create</button>
     </form>
   );
 };

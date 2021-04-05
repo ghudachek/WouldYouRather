@@ -1,0 +1,121 @@
+.create-q {
+  background-color: white;
+  border-radius: 50px;
+  width: fit-content;
+  min-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 10vh;
+  margin-left: 25vh;
+  color: black;
+  align-items: center;
+  padding: 20px;
+}
+.label-q {
+  font-size: 50px;
+  font-family: "Gurajada";
+}
+
+.creat-q-input {
+  border-radius: 20px;
+  padding: 10px;
+  font-family: "Gurajada";
+}
+
+.create-btn {
+  width: fit-content;
+  border-radius: 20px;
+  font-size: 50px;
+  font-family: "Gurajada";
+  background-color: #b22d84;
+  border: none;
+}
+.or {
+  margin-left: 130px;
+  font-size: 70px;
+  font-family: "Gurajada";
+}
+.wyr-cq {
+  margin-left: 130px;
+  font-size: 90px;
+  font-family: "Gurajada";
+  margin-bottom: 90px;
+}
+
+.create-btn:hover {
+  transition: color 0.5s;
+  color: white;
+  box-shadow: 0px 0px 10px #b22d84;
+}
+
+@media only screen and (max-width: 1500px) {
+  .wyr-cq {
+    margin-left: 0px;
+    font-size: 70px;
+    font-family: "Gurajada";
+    margin-bottom: 20px;
+  }
+  .label-q {
+    margin-left: -20px;
+    font-size: 40px;
+    font-family: "Gurajada";
+    padding-right: 10px;
+  }
+
+  .creat-q-input {
+    border-radius: 20px;
+    padding: 0;
+    padding-left: 10px;
+    font-family: "Gurajada";
+  }
+
+  .create-btn {
+    width: fit-content;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 50px;
+    font-family: "Gurajada";
+    background-color: #b22d84;
+    border: none;
+  }
+  .or {
+    margin-left: 0px;
+    font-size: 60px;
+    font-family: "Gurajada";
+  }
+}
+@media only screen and (max-width: 400px) {
+  .create-q {
+    min-width: 90vw;
+    margin: 5vh;
+    margin-left: 5vw;
+    padding: 10px;
+  }
+  .label-q {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  .creat-q-input {
+    text-align: center;
+    border-radius: 20px;
+    padding: 0px;
+  }
+  .create-btn {
+    width: 30vw;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .or {
+    margin-left: 0px;
+    font-size: 40px;
+  }
+  .wyr-cq {
+    margin-left: 0px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}

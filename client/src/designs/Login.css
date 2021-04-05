@@ -1,0 +1,98 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30vw;
+  justify-content: start;
+  margin-top: 15vh;
+  background-color: #ffffff9f;
+  border-radius: 35px;
+  width: 80vh;
+  height: 40vh;
+  box-shadow: 0px 0px 12px rgba(226, 224, 224, 0.678);
+}
+
+.login-input {
+  height: 45px;
+  width: 10vw;
+  border-radius: 20px;
+  font-family: "Gurajada";
+  padding: 20px;
+  font-size: 35px;
+}
+
+.login-label {
+  font-size: 50px;
+  font-family: "Gurajada";
+  padding-right: 15px;
+}
+.submit-btn {
+  border: none;
+  background-color: #b22d84;
+  width: 8vw;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-left: 17vw;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.274);
+  font-family: "Gurajada";
+}
+.submit-btn:hover {
+  color: white;
+}
+.login-form-title {
+  margin-top: 20px;
+  margin-bottom: 3vh;
+  font-size: 80px;
+  color: #b22d84;
+  font-family: "Gurajada";
+}
+.or-join {
+  font-size: 35px;
+  font-family: "Gurajada";
+}
+.or-join:hover {
+  color: #b22d84;
+}
+
+@media only screen and (max-width: 400px) {
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7vw;
+    justify-content: start;
+    margin-top: 10vh;
+    background-color: #ffffff9f;
+    border-radius: 35px;
+    width: 40vh;
+    height: 50vh;
+    box-shadow: 0px 0px 12px rgba(226, 224, 224, 0.678);
+  }
+
+  .login-input {
+    height: 20px;
+    width: 35vw;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .login-label {
+    font-size: 25px;
+    padding-right: 15px;
+  }
+  .submit-btn {
+    width: 18vw;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 34vw;
+  }
+  .login-form-title {
+    margin-top: 20px;
+    margin-bottom: 1vh;
+    font-size: 60px;
+  }
+  .or-join {
+    margin-top: -20px;
+    font-size: 25px;
+  }
+}

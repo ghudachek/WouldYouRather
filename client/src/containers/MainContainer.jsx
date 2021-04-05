@@ -15,29 +15,24 @@ import Landing from "../screens/Landing";
 import Home from "../screens/Home";
 import Create from "../screens/CreateQuestion";
 import Account from "../screens/Account";
-import QuestionEdit from "../screens/QuestionEdit";
 import QuestionDetail from "../screens/QuestionDetail";
+import EditProfile from "../screens/EditProfile";
+import { postAnswer } from "../services/answers";
+
 export default function MainContainer(props) {
   const [questions, setQuestions] = useState([]);
   const [comments, setComments] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
 
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      const questionData = await getAllQuestions();
-      setQuestions(questionData);
-    };
-    fetchQuestions();
-  }, []);
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      const commentData = await getAllComments();
-      setComments(commentData);
-    };
-    fetchComments();
-  }, []);
+  const handleCreateAnswers = async (id, answer) => {
+    const newQuestion = await postAnswer(id, answer);
+    setQuestions((prevState) =>
+      prevState.map((question) => {
+        return question.id === id ? newQuestion : question;
+      })
+    );
+  };
 
   const handleCreateQuestions = async (questionData) => {
     const newQuestion = await postQuestion(questionData);
@@ -49,13 +44,13 @@ export default function MainContainer(props) {
     const newComment = await postComment(id, commentData);
     setComments((prevState) => [...prevState, newComment]);
   };
-  const handleDeleteComment = async (id) => {
-    await destroyComment(id);
+  const handleDeleteComment = async (id1, id2) => {
+    await destroyComment(id1, id2);
     setComments((prevState) =>
-      prevState.filter((comment) => comment.id !== id)
+      prevState.filter((comment) => comment.id !== id2)
     );
+    history.push("/account");
   };
-
   const handleDelete = async (id) => {
     await destroyQuestion(id);
     setQuestions((prevState) =>
@@ -63,6 +58,19 @@ export default function MainContainer(props) {
     );
     history.push("/account");
   };
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      const questionData = await getAllQuestions();
+      setQuestions(questionData);
+    };
+    fetchQuestions();
+    const fetchComments = async () => {
+      const commentData = await getAllComments();
+      setComments(commentData);
+    };
+    fetchComments();
+  }, []);
   return (
     <Switch>
       <Route exact path="/">
@@ -74,6 +82,7 @@ export default function MainContainer(props) {
           questions={questions}
           comments={comments}
           handleCreateComments={handleCreateComments}
+          handleCreateAnswers={handleCreateAnswers}
         />
       </Route>
       <Route exact path="/create">
@@ -91,15 +100,18 @@ export default function MainContainer(props) {
           handleDeleteComment={handleDeleteComment}
         />
       </Route>
-      <Route exact path="/edit/:id">
-        <QuestionEdit user={currentUser} />
-      </Route>
       <Route path="/questions/:id/detail">
         <QuestionDetail
           currentUser={currentUser}
           questions={questions}
           comments={comments}
           handleCreateComments={handleCreateComments}
+        />
+      </Route>
+      <Route path="/user/edit">
+        <EditProfile
+          user={currentUser}
+          handleUpdateUser={props.handleUpdateUser}
         />
       </Route>
     </Switch>

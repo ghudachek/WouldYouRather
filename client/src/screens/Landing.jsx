@@ -21,8 +21,8 @@ const Landing = (props) => {
                 <button className="block1">{props.questions[0].choice1}</button>
                 <button className="block2">{props.questions[0].choice2}</button>
                 <div className="info-wyr">
-                  <h3>
-                    Would you rather {props.questions[0].choice1} or{" "}
+                  <h3 className="landing-h3">
+                    Would you rather {props.questions[0].choice1} or
                     {props.questions[0].choice2}
                   </h3>
                   <Link to="/join">
@@ -36,8 +36,8 @@ const Landing = (props) => {
                 <button className="block1">{props.questions[1].choice1}</button>
                 <button className="block2">{props.questions[1].choice2}</button>
                 <div className="info-wyr">
-                  <h3>
-                    Would you rather {props.questions[1].choice1} or{" "}
+                  <h3 className="landing-h3">
+                    Would you rather {props.questions[1].choice1} or
                     {props.questions[1].choice2}
                   </h3>
                   <Link to="/join">

@@ -6,6 +6,8 @@ import Layout from "./layout/Layout";
 import { verifyUser, loginUser, joinUser, removeToken } from "./services/auth";
 import Join from "./screens/Join";
 import Login from "./screens/Login";
+import "material-design-icons";
+import { updateUser } from "./services/users";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -38,8 +40,19 @@ function App() {
     history.push("/");
   };
 
+  const handleUpdateUser = async (id, userData) => {
+    const update = await updateUser(id, userData);
+    setCurrentUser(update);
+    history.push("/account");
+    console.log(currentUser);
+  };
+
   return (
     <div className="App">
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      ></link>
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/login">
@@ -49,7 +62,10 @@ function App() {
             <Join handleJoin={handleJoin} />
           </Route>
           <Route path="/">
-            <MainContainer currentUser={currentUser} />
+            <MainContainer
+              currentUser={currentUser}
+              handleUpdateUser={handleUpdateUser}
+            />
           </Route>
         </Switch>
       </Layout>

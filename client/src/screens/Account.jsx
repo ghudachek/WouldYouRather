@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { getUser, getUserQuestions } from "../services/users";
+import { Link } from "react-router-dom";
+import "material-design-icons";
 
 import "../designs/Account.css";
 const Account = (props) => {
@@ -38,34 +38,53 @@ const Account = (props) => {
     <>
       <div className="account">
         <h1 className="welcome">Welcome {props.user?.username}!</h1>
-        <div className="acct-info">
-          <h2>Your Information:</h2>
-          <div
-            className="round"
-            style={{ backgroundImage: `url(${props.user?.image})` }}
-          ></div>
-          <p>Email: {props.user?.email}</p>
-          <p>Username: {props.user?.username}</p>
-        </div>
-        <div className="comments">
-          Your Comments:{" "}
-          {userComments?.map((comment) => (
-            <div className="one-comment">
-              <p>{comment.post}</p>
-            </div>
-          ))}
+        <div className="row">
+          <div className="acct-info">
+            <h2 className="account-titles">Your Information:</h2>
+            <div
+              className="round"
+              style={{ backgroundImage: `url(${props.user?.image})` }}
+            ></div>
+            <p>Email: {props.user?.email}</p>
+            <p>Username: {props.user?.username}</p>
+            <Link className="edit-user" to="/user/edit">
+              Edit Profile
+            </Link>
+          </div>
+
+          <div className="comments">
+            <h2 className="account-titles">Your Comments:</h2>
+            {userComments?.map((comment) => (
+              <div className="one-comment">
+                <p className="comment">{comment.post}</p>
+                <button
+                  className="delete-wyr"
+                  onClick={() =>
+                    props.handleDeleteComment(comment.question_id, comment.id)
+                  }
+                >
+                  <span className="material-icons md-36">delete</span>
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="user-wyr">
-          <h2>Your W.Y.Rs:</h2>
+          <h2 className="account-titles">Your W.Y.Rs:</h2>
           {userQuestions?.map((question) => (
             <div className="one-wyr">
-              <h4>Would You Rather</h4>
+              <div>
+                <span className="span">Would You Rather</span>
+                <button
+                  className="delete-wyr"
+                  onClick={() => props.handleDelete(question.id)}
+                >
+                  <span className="material-icons md-36">delete</span>
+                </button>
+              </div>
               <div className="user-block-1">Choice 1: {question.choice1}</div>
               or
               <div className="user-block-2">Choice 2: {question.choice2}</div>
-              <button onClick={() => props.handleDelete(question.id)}>
-                Delete
-              </button>
             </div>
           ))}
         </div>
