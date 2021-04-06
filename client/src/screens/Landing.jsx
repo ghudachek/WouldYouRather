@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../designs/Landing.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+
 const Landing = (props) => {
   console.log(props.questions);
 
