@@ -64,11 +64,11 @@ export default function MainContainer(props) {
       const questionData = await getAllQuestions();
       setQuestions(questionData);
     };
-    fetchQuestions();
     const fetchComments = async () => {
       const commentData = await getAllComments();
       setComments(commentData);
     };
+    fetchQuestions();
     fetchComments();
   }, []);
   return (

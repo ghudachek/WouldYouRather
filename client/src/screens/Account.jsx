@@ -25,14 +25,14 @@ const Account = (props) => {
   useEffect(() => {
     function fetchUserComments() {
       props.comments?.map((comment) => {
-        if (comment.user_id === props.user.id) {
+        if (comment.user_id === props.user?.id) {
           userCommentData.push(comment);
         }
       });
       setUserComments(userCommentData);
     }
     fetchUserComments();
-  }, [props.handleCommentDelete]);
+  }, [props.handleDeleteComment]);
 
   return (
     <>
