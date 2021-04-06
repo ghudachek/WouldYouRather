@@ -34,7 +34,7 @@ export const QuestionCard = (props) => {
             type="button"
             value={
               answered
-                ? question.choice1 + " " + percentage1 * 100 + "%"
+                ? question.choice1 + " " + Math.round(percentage1 * 100) + "%"
                 : question.choice1
             }
             className="choice1"
@@ -49,7 +49,7 @@ export const QuestionCard = (props) => {
             style={answered ? { height: `${percentage2 * 50}vh` } : {}}
             value={
               answered
-                ? question.choice2 + " " + percentage2 * 100 + "%"
+                ? question.choice2 + " " + Math.round(percentage2 * 100) + "%"
                 : question.choice2
             }
             className="choice2"
