@@ -3,6 +3,7 @@
   font-size: 30px;
   font-family: "Gurajada";
 }
+
 .input {
   color: black;
   border-radius: 25px;
@@ -22,6 +23,9 @@
 .images-join {
   color: transparent;
   margin: 8px;
+}
+.join label {
+  color: black;
 }
 .images-join:hover {
   transition: color 0.5s;

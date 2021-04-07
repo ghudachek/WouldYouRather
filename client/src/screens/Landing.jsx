@@ -4,15 +4,10 @@ import "../designs/Landing.css";
 import { Link } from "react-router-dom";
 
 const Landing = (props) => {
-  console.log(props.questions);
-
   return (
     <>
       {props.questions.length === 0 ? (
-        <p>
-          Loading
-          {console.log("not loading")}
-        </p>
+        <p>Loading</p>
       ) : (
         <div>
           <Carousel>
