@@ -89,6 +89,7 @@ const QuestionDetail = (props) => {
                       </div>
                     );
                   }
+                  return null;
                 })
               : null}
           </div>

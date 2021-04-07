@@ -16,6 +16,7 @@ const Account = (props) => {
         if (question.user_id === props.user.id) {
           userQuestionData.push(question);
         }
+        return userQuestionData;
       });
       setUserQuestions(userQuestionData);
     }

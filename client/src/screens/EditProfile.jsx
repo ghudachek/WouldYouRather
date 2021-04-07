@@ -7,7 +7,7 @@ const EditProfile = (props) => {
   const [formData, setFormData] = useState({
     image: "",
   });
-  const { image } = formData;
+
   const images = [
     "https://images.unsplash.com/photo-1466921583968-f07aa80c526e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     "https://images.unsplash.com/photo-1605054576990-8d1d1e623fad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -23,14 +23,13 @@ const EditProfile = (props) => {
       ...prevState,
       [name]: value,
     }));
-    console.log(formData);
   };
   return (
     <form
       className="acct-info-edit"
       onSubmit={(e) => {
         e.preventDefault();
-        handleUpdateUser(user?.id, formData);
+        handleUpdateUser(user?.id, formData.image);
       }}
     >
       <h2>Edit Your Information:</h2>

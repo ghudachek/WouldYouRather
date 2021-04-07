@@ -8,7 +8,7 @@ const Landing = (props) => {
 
   return (
     <>
-      {props.questions.length == 0 ? (
+      {props.questions.length === 0 ? (
         <p>
           Loading
           {console.log("not loading")}
