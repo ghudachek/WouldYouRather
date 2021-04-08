@@ -92,15 +92,15 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
 | Create Backend Scaffold              |    H     |     3 hrs      |     2hrs      |    2hrs     |
 | Add Routes and seed data             |    H     |     1 hrs      |     2hrs      |    2hrs     |
-| Create React App- file structure     |    H     |     1 hrs      |      hrs      |     TBD     |
-| Build out routes/front end           |    H     |     3 hrs      |      hrs      |     TBD     |
-| Build Landing page                   |    H     |     3 hrs      |      hrs      |     TBD     |
-| Build Home page                      |    H     |     3 hrs      |      hrs      |     TBD     |
-| Build Sign in Sign Up Forms          |    H     |     3 hrs      |      hrs      |     TBD     |
-| Build Write Your Own Form            |    H     |     3 hrs      |      hrs      |     TBD     |
-| Css basics for each layout           |    H     |     8 hrs      |      hrs      |     TBD     |
-| advance css- animations, transitions |    H     |     4 hrs      |      hrs      |     TBD     |
-| TOTAL                                |          |     30hrs      |      hrs      |     TBD     |
+| Create React App- file structure     |    H     |     1 hrs      |      30mins      |     30mins     |
+| Build out routes/front end           |    H     |     3 hrs      |      1hrs      |     1hrs     |
+| Build Landing page                   |    H     |     3 hrs      |      3hrs      |     3hrs     |
+| Build Home page                      |    H     |     3 hrs      |      5hrs      |     5hrs     |
+| Build Sign in Sign Up Forms          |    H     |     3 hrs      |      2hrs      |     2hrs     |
+| Build Write Your Own Form            |    H     |     3 hrs      |      1hr      |     1hr     |
+| Css basics for each layout           |    H     |     8 hrs      |      8hrs      |     8hrs     |
+| advance css- animations, transitions |    H     |     4 hrs      |      4hrs      |     4hrs     |
+| TOTAL                                |          |     30hrs      |      28.5hrs      |     28.5hrs     |
 
 <br>
 
@@ -124,6 +124,4 @@ The **Would You Rather** MVP is to have full CRUD functionality with a user logi
 
 ---
 
-## Code Showcase
 
-## Code Issues & Resolutions
