@@ -58,45 +58,48 @@ const QuestionDetail = (props) => {
           <br />
           <h3 className="comment-title-details">Debate:</h3>
           <div className="comment-section">
-            {props.comments.length !== 0
-              ? props.comments.map((comment) => {
-                  if (
-                    comment.question_id === question.id &&
-                    comment.user_id !== props.currentUser.id
-                  ) {
-                    return (
-                      <div key={comment.post} className="comments-detail">
-                        <h4 className="username-detail">
-                          {users?.map((user) =>
-                            user.id === comment.user_id ? user.username : null
-                          )}
-                        </h4>
-                        <h4>{comment.post}</h4>
-                      </div>
-                    );
-                  } else if (
-                    comment.question_id === question.id &&
-                    comment.user_id === props.currentUser.id
-                  ) {
-                    return (
-                      <div key={comment.post} className="you-comments-detail">
-                        <h4 className="you-username-detail">
-                          {users?.map((user) =>
-                            user.id === comment.user_id ? user.username : null
-                          )}
-                        </h4>
-                        <h4>{comment.post}</h4>
-                      </div>
-                    );
-                  }
-                  return null;
-                })
-              : null}
+            <div className="all-comments">
+              {props.comments.length !== 0
+                ? props.comments.map((comment) => {
+                    if (
+                      comment.question_id === question.id &&
+                      comment.user_id !== props.currentUser.id
+                    ) {
+                      return (
+                        <div key={comment.post} className="comments-detail">
+                          <h4 className="username-detail">
+                            {users?.map((user) =>
+                              user.id === comment.user_id ? user.username : null
+                            )}
+                          </h4>
+                          <h4>{comment.post}</h4>
+                        </div>
+                      );
+                    } else if (
+                      comment.question_id === question.id &&
+                      comment.user_id === props.currentUser.id
+                    ) {
+                      return (
+                        <div key={comment.post} className="you-comments-detail">
+                          <h4 className="you-username-detail">
+                            {users?.map((user) =>
+                              user.id === comment.user_id ? user.username : null
+                            )}
+                          </h4>
+                          <h4>{comment.post}</h4>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })
+                : null}
+            </div>
+            <CommentCreate
+              handleCreate={props.handleCreateComments}
+              questionId={question.id}
+            />
           </div>
-          <CommentCreate
-            handleCreate={props.handleCreateComments}
-            questionId={question.id}
-          />
+
           <Link className="details-back-link" to="/home">
             <span className="material-icons md-48">arrow_back</span>
           </Link>
