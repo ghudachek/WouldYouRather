@@ -26,6 +26,7 @@
   margin-left: 5vw;
 }
 .questions-move h3 {
+  padding: 10px;
   padding-top: 20px;
   font-size: 33px;
   font-family: "BenchNine";
@@ -50,8 +51,9 @@
   height: fit-content;
   border: none;
   box-shadow: 0px 0px 15px rgb(5, 5, 5);
-  font-size: 40px;
+  font-size: 25px;
   transition: height 1s;
+  transition-timing-function: ease-in;
   white-space: pre-wrap;
   word-wrap: normal;
 }
@@ -61,20 +63,25 @@
   box-shadow: 0px 0px 10px white;
   color: rgba(255, 255, 255, 0.747);
 }
+.choice1::before,
+.choice2::before{
+transition-timing-function: ease-in;
+transition: height 1s;
+}
 .debate {
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 45px;
   padding: 15px;
   margin: 25px;
   border: none;
 }
 .question-description h3 {
-  font-size: 60px;
+  font-size: 40px;
   font-family: "BenchNine";
 }
 .question-description {
   z-index: 2;
-  font-size: 70px;
+  font-size: 60px;
   font-family: "BenchNine";
 }
 .debate:hover {
@@ -95,29 +102,30 @@
     grid-template-columns: repeat(4) 1fr;
     grid-template-rows: 1fr;
     height: 40vh;
-    width: 80vw;
+    width: 75vw;
     align-self: center;
     margin-left: 10vw;
   }
   .choice1,
   .choice2 {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    min-height: 0vh;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 2vh;
     max-height: 30vh;
-    min-width: 20vh;
+    min-width: 15vh;
     width: fit-content;
     height: 15vh;
-    align-self: end;
+    justify-self: center;
   }
   .choice1 {
     grid-column: 2;
+   justify-self: center;
     grid-column-end: 3;
   }
   .question-description h3 {
     z-index: 2;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 2vh;
   }
   .debate {
@@ -138,10 +146,10 @@
   }
   .choice1,
   .choice2 {
-    font-size: 20px;
+    font-size: 15px;
     margin: 0;
     padding: 0;
-    min-height: 0vh;
+    min-height: 2vh;
     max-height: 30vh;
     width: 12vw;
     min-width: 15vh;
@@ -160,7 +168,7 @@
     margin-top: 2vh;
   }
   .debate {
-    font-size: 20px;
+    font-size: 15px;
     padding: 15px;
     margin: 10px;
   }

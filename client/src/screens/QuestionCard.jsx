@@ -30,7 +30,7 @@ export const QuestionCard = (props) => {
         <br />
         <div className="questions-move">
           <input
-            style={answered ? { height: `${percentage1 * 50}vh` } : {}}
+            style={answered ? { height: `${percentage1 * 50}vh`, minHeight: '2vh', transition: 'ease-in' } : {}}
             type="button"
             value={
               answered
@@ -46,7 +46,7 @@ export const QuestionCard = (props) => {
           ></input>
           <input
             type="button"
-            style={answered ? { height: `${percentage2 * 50}vh` } : {}}
+            style={answered ? { height: `${percentage2 * 50}vh`, minHeight: '2vh', transition: 'ease-in' } : {}}
             value={
               answered
                 ? question.choice2 + " " + Math.round(percentage2 * 100) + "%"
