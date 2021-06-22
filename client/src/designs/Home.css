@@ -30,10 +30,18 @@
   font-size: 33px;
   font-family: "BenchNine";
 }
-
+.choice1 {
+  background-color: violet;
+  grid-column: 2;
+  align-self: end;
+}
+.choice2 {
+  grid-column: 3;
+  background-color: #b22d84;
+  align-self: end;
+}
 .choice1,
 .choice2 {
-  white-space: pre-wrap;
   display: inline-block;
   margin: 20px;
   min-height: 20vh;
@@ -44,16 +52,8 @@
   box-shadow: 0px 0px 15px rgb(5, 5, 5);
   font-size: 40px;
   transition: height 1s;
-}
-.choice1 {
-  background-color: violet;
-  grid-column: 2;
-  align-self: end;
-}
-.choice2 {
-  grid-column: 3;
-  background-color: #b22d84;
-  align-self: end;
+  white-space: pre-wrap;
+  word-wrap: normal;
 }
 .choice1:hover,
 .choice2:hover {
