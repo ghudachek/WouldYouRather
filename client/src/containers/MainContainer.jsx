@@ -74,7 +74,7 @@ export default function MainContainer(props) {
   return (
     <Switch>
       <Route exact path="/">
-        <Landing questions={questions} />
+        <Landing questions={questions !== []&& questions} />
       </Route>
       <Route path="/home">
         <Home
