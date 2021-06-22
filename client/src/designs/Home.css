@@ -35,11 +35,13 @@
   background-color: violet;
   grid-column: 2;
   align-self: end;
+  white-space: pre-wrap;
 }
 .choice2 {
   grid-column: 3;
   background-color: #b22d84;
   align-self: end;
+  white-space: pre-wrap;
 }
 .choice1,
 .choice2 {
